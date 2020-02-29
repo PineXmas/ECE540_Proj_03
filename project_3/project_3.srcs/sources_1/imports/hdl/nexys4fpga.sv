@@ -50,7 +50,7 @@ module Nexys4fpga (
 
 	// parameters
 	parameter SIMULATE = 0;
-	localparam	N_INPUTS = 15;
+	localparam	N_INPUTS = 8;
 
 	// internal variables
 	wire 	[15:0]		db_sw;					// debounced switches
@@ -81,6 +81,7 @@ module Nexys4fpga (
 	wire	[N_INPUTS:0]		sel;					// selects for the output multiplexer
 	
 	wire				clk_100;
+	integer position;
 	
 	//instantiate the debounce module
 	debounce
@@ -151,6 +152,7 @@ module Nexys4fpga (
 		.mux_sel(sel),
 		.operands(inputs),
 		.result(result),
+		.position(position),
 		.dig7(dig7),
 		.dig6(dig6),
 		.dig5(dig5),
@@ -163,7 +165,7 @@ module Nexys4fpga (
 		.decpts(decpts)
 	);	
 
-	mean
+	mean_v2
 	#(
 		.N_INPUTS	(N_INPUTS)
 	)
@@ -183,7 +185,7 @@ module Nexys4fpga (
 
   	clk_wiz_0 generated_clock(
     // Clock out ports
-    .clk_out1(clk_100),     // output clk_out1
+    .clk_220(clk_100),     // output clk_out1
     // Status and control signals
     //.reset(sys_reset), // input reset
    // Clock in ports
@@ -205,13 +207,37 @@ module Nexys4fpga (
 	
 
 	//Load operands
-	integer position, i;
- 	always@(*)
- 	begin
- 		position = 0;
- 		for( i = 0; i < N_INPUTS; i = i+1 )
- 			if( sel[i+1] ) //as sel[0] is for result
- 				position = i;
+	integer i;
+	genvar gen_i;
+	integer position_tmp;
+	tri [31:0] position_tri;
+	
+//	// ==================================================
+//	// original code
+//	// ==================================================
+// 	always@(*)
+// 	begin
+// 		position = 0;
+// 		for( i = 0; i < N_INPUTS; i = i+1 )
+// 			if( sel[i+1] ) //as sel[0] is for result
+// 				position = i;
+// 	end
+
+  // ==================================================
+	// method #2
+  // ==================================================
+ 	generate
+ 		for( gen_i = 0; gen_i < N_INPUTS; gen_i++)
+ 				assign position_tri = sel[gen_i+1] ? gen_i : 'z;
+ 	endgenerate
+ 	
+ 	always @(posedge sysclk) begin
+    for( i = 0; i < N_INPUTS; i++)
+        position_tmp <= sel[i+1] ? i : 'z;
+  end
+ 	
+ 	always @(posedge sysclk) begin
+ 	  position <= sel[0] ? '0 : position_tmp;
  	end
 
 	always@(posedge sysclk)

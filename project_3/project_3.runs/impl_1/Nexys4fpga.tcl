@@ -60,11 +60,14 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param synth.incrementalSynthesisCache C:/Users/thong/AppData/Local/Temp/.Xil_thong/Vivado-124-caplab10/incrSyn
   create_project -in_memory -part xc7a100tcsg324-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
@@ -91,7 +94,7 @@ start_step opt_design
 set ACTIVE_STEP opt_design
 set rc [catch {
   create_msg_db opt_design.pb
-  opt_design -directive ExploreSequentialArea
+  opt_design 
   write_checkpoint -force Nexys4fpga_opt.dcp
   create_report "impl_1_opt_report_drc_0" "report_drc -file Nexys4fpga_drc_opted.rpt -pb Nexys4fpga_drc_opted.pb -rpx Nexys4fpga_drc_opted.rpx"
   close_msg_db -file opt_design.pb
@@ -111,7 +114,7 @@ set rc [catch {
   if { [llength [get_debug_cores -quiet] ] > 0 }  { 
     implement_debug_core 
   } 
-  place_design -directive EarlyBlockPlacement
+  place_design -directive ExtraTimingOpt
   write_checkpoint -force Nexys4fpga_placed.dcp
   create_report "impl_1_place_report_io_0" "report_io -file Nexys4fpga_io_placed.rpt"
   create_report "impl_1_place_report_utilization_0" "report_utilization -file Nexys4fpga_utilization_placed.rpt -pb Nexys4fpga_utilization_placed.pb"
@@ -130,7 +133,7 @@ start_step phys_opt_design
 set ACTIVE_STEP phys_opt_design
 set rc [catch {
   create_msg_db phys_opt_design.pb
-  phys_opt_design -directive AlternateFlowWithRetiming
+  phys_opt_design -directive Explore
   write_checkpoint -force Nexys4fpga_physopt.dcp
   close_msg_db -file phys_opt_design.pb
 } RESULT]
@@ -142,18 +145,17 @@ if {$rc} {
   unset ACTIVE_STEP 
 }
 
-  set_msg_config -source 4 -id {Route 35-39} -severity "critical warning" -new_severity warning
 start_step route_design
 set ACTIVE_STEP route_design
 set rc [catch {
   create_msg_db route_design.pb
-  route_design -directive AlternateCLBRouting
+  route_design -directive NoTimingRelaxation
   write_checkpoint -force Nexys4fpga_routed.dcp
   create_report "impl_1_route_report_drc_0" "report_drc -file Nexys4fpga_drc_routed.rpt -pb Nexys4fpga_drc_routed.pb -rpx Nexys4fpga_drc_routed.rpx"
   create_report "impl_1_route_report_methodology_0" "report_methodology -file Nexys4fpga_methodology_drc_routed.rpt -pb Nexys4fpga_methodology_drc_routed.pb -rpx Nexys4fpga_methodology_drc_routed.rpx"
   create_report "impl_1_route_report_power_0" "report_power -file Nexys4fpga_power_routed.rpt -pb Nexys4fpga_power_summary_routed.pb -rpx Nexys4fpga_power_routed.rpx"
   create_report "impl_1_route_report_route_status_0" "report_route_status -file Nexys4fpga_route_status.rpt -pb Nexys4fpga_route_status.pb"
-  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file Nexys4fpga_timing_summary_routed.rpt -pb Nexys4fpga_timing_summary_routed.pb -rpx Nexys4fpga_timing_summary_routed.rpx"
+  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file Nexys4fpga_timing_summary_routed.rpt -pb Nexys4fpga_timing_summary_routed.pb -rpx Nexys4fpga_timing_summary_routed.rpx -warn_on_violation "
   create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file Nexys4fpga_incremental_reuse_routed.rpt"
   create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file Nexys4fpga_clock_utilization_routed.rpt"
   create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file Nexys4fpga_bus_skew_routed.rpt -pb Nexys4fpga_bus_skew_routed.pb -rpx Nexys4fpga_bus_skew_routed.rpx"
@@ -165,43 +167,6 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
-  unset ACTIVE_STEP 
-}
-
-start_step post_route_phys_opt_design
-set ACTIVE_STEP post_route_phys_opt_design
-set rc [catch {
-  create_msg_db post_route_phys_opt_design.pb
-  phys_opt_design -directive ExploreWithAggressiveHoldFix
-  write_checkpoint -force Nexys4fpga_postroute_physopt.dcp
-  create_report "impl_1_post_route_phys_opt_report_timing_summary_0" "report_timing_summary -max_paths 10 -warn_on_violation -file Nexys4fpga_timing_summary_postroute_physopted.rpt -pb Nexys4fpga_timing_summary_postroute_physopted.pb -rpx Nexys4fpga_timing_summary_postroute_physopted.rpx"
-  create_report "impl_1_post_route_phys_opt_report_bus_skew_0" "report_bus_skew -warn_on_violation -file Nexys4fpga_bus_skew_postroute_physopted.rpt -pb Nexys4fpga_bus_skew_postroute_physopted.pb -rpx Nexys4fpga_bus_skew_postroute_physopted.rpx"
-  close_msg_db -file post_route_phys_opt_design.pb
-} RESULT]
-if {$rc} {
-  step_failed post_route_phys_opt_design
-  return -code error $RESULT
-} else {
-  end_step post_route_phys_opt_design
-  unset ACTIVE_STEP 
-}
-
-start_step write_bitstream
-set ACTIVE_STEP write_bitstream
-set rc [catch {
-  create_msg_db write_bitstream.pb
-  set_property XPM_LIBRARIES XPM_CDC [current_project]
-  catch { write_mem_info -force Nexys4fpga.mmi }
-  write_bitstream -force Nexys4fpga.bit 
-  catch {write_debug_probes -quiet -force Nexys4fpga}
-  catch {file copy -force Nexys4fpga.ltx debug_nets.ltx}
-  close_msg_db -file write_bitstream.pb
-} RESULT]
-if {$rc} {
-  step_failed write_bitstream
-  return -code error $RESULT
-} else {
-  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 

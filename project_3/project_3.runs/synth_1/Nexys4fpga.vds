@@ -2,8 +2,8 @@
 # Vivado v2018.2.1 (64-bit)
 # SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
 # IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
-# Start of session at: Thu Feb 27 16:21:01 2020
-# Process ID: 11716
+# Start of session at: Fri Feb 28 19:24:05 2020
+# Process ID: 6612
 # Current directory: N:/Projects/ECE540_Proj_03/project_3/project_3.runs/synth_1
 # Command line: vivado.exe -log Nexys4fpga.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Nexys4fpga.tcl
 # Log file: N:/Projects/ECE540_Proj_03/project_3/project_3.runs/synth_1/Nexys4fpga.vds
@@ -15,13 +15,13 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 5092 
+INFO: Helper process launched with PID 8128 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 407.492 ; gain = 98.066
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 407.793 ; gain = 97.684
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Nexys4fpga' [N:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/imports/hdl/nexys4fpga.sv:34]
 	Parameter SIMULATE bound to: 0 - type: integer 
-	Parameter N_INPUTS bound to: 15 - type: integer 
+	Parameter N_INPUTS bound to: 16 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'debounce' [N:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/imports/hdl/debounce.v:24]
 	Parameter CLK_FREQUENCY_HZ bound to: 100000000 - type: integer 
 	Parameter DEBOUNCE_FREQUENCY_HZ bound to: 250 - type: integer 
@@ -101,30 +101,31 @@ INFO: [Synth 8-6157] synthesizing module 'Digit' [N:/Projects/ECE540_Proj_03/pro
 INFO: [Synth 8-6155] done synthesizing module 'Digit' (2#1) [N:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/imports/hdl/sevensegment.v:196]
 INFO: [Synth 8-6155] done synthesizing module 'sevensegment' (3#1) [N:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/imports/hdl/sevensegment.v:35]
 INFO: [Synth 8-6157] synthesizing module 'control_unit' [N:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/imports/hdl/control_unit.v:20]
-	Parameter N_INPUTS bound to: 15 - type: integer 
+	Parameter N_INPUTS bound to: 16 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'control_unit' (4#1) [N:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/imports/hdl/control_unit.v:20]
 INFO: [Synth 8-6157] synthesizing module 'sevenseg_outmux' [N:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/imports/hdl/sevenseg_outmux.sv:27]
-	Parameter N_INPUTS bound to: 15 - type: integer 
+	Parameter N_INPUTS bound to: 16 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'binary_to_bcd' [N:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/imports/hdl/binary_to_bcd.v:53]
 	Parameter BITS_IN_PP bound to: 32 - type: integer 
 	Parameter BCD_DIGITS_OUT_PP bound to: 8 - type: integer 
 	Parameter BIT_COUNT_WIDTH_PP bound to: 8 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'binary_to_bcd' (5#1) [N:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/imports/hdl/binary_to_bcd.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'sevenseg_outmux' (6#1) [N:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/imports/hdl/sevenseg_outmux.sv:27]
-INFO: [Synth 8-6157] synthesizing module 'mean' [N:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/imports/hdl/mean.sv:1]
-	Parameter N_INPUTS bound to: 15 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'mean' (7#1) [N:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/imports/hdl/mean.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [N:/Projects/ECE540_Proj_03/project_3/project_3.runs/synth_1/.Xil/Vivado-11716-caplab11/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (8#1) [N:/Projects/ECE540_Proj_03/project_3/project_3.runs/synth_1/.Xil/Vivado-11716-caplab11/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mean_v2' [N:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/imports/hdl/mean_v2.sv:6]
+	Parameter N_INPUTS bound to: 16 - type: integer 
+	Parameter HALF_INPUTS bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mean_v2' (7#1) [N:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/imports/hdl/mean_v2.sv:6]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [N:/Projects/ECE540_Proj_03/project_3/project_3.runs/synth_1/.Xil/Vivado-6612-caplab10/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (8#1) [N:/Projects/ECE540_Proj_03/project_3/project_3.runs/synth_1/.Xil/Vivado-6612-caplab10/realtime/clk_wiz_0_stub.v:5]
+WARNING: [Synth 8-350] instance 'generated_clock' of module 'clk_wiz_0' requires 8 connections, but only 2 given [N:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/imports/hdl/nexys4fpga.sv:184]
 INFO: [Synth 8-6155] done synthesizing module 'Nexys4fpga' (9#1) [N:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/imports/hdl/nexys4fpga.sv:34]
 WARNING: [Synth 8-3917] design Nexys4fpga has port JA[7] driven by constant 0
 WARNING: [Synth 8-3917] design Nexys4fpga has port JA[6] driven by constant 0
 WARNING: [Synth 8-3917] design Nexys4fpga has port JA[2] driven by constant 0
 WARNING: [Synth 8-3917] design Nexys4fpga has port JA[1] driven by constant 0
-WARNING: [Synth 8-3331] design mean has unconnected port clk
-WARNING: [Synth 8-3331] design mean has unconnected port reset
+WARNING: [Synth 8-3331] design mean_v2 has unconnected port reset
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 462.367 ; gain = 152.941
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 462.770 ; gain = 152.660
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -137,10 +138,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 462.367 ; gain = 152.941
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 462.770 ; gain = 152.660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 462.367 ; gain = 152.941
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 462.770 ; gain = 152.660
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -158,25 +159,25 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 826.273 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 826.410 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 826.273 ; gain = 516.848
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 826.410 ; gain = 516.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 826.273 ; gain = 516.848
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 826.410 ; gain = 516.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  n:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  n:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  n:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  n:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 8).
 Applied set_property DONT_TOUCH = true for generated_clock. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:19 . Memory (MB): peak = 826.273 ; gain = 516.848
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:17 . Memory (MB): peak = 826.410 ; gain = 516.301
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "db_count" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "shift_pb0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -208,6 +209,7 @@ INFO: [Synth 8-5545] ROM "an" won't be mapped to RAM because address size (32) i
 INFO: [Synth 8-5546] ROM "an" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "dig4" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "dig1" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "inputs_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "inputs_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "inputs_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "inputs_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -223,6 +225,7 @@ INFO: [Synth 8-5545] ROM "inputs_reg[3]" won't be mapped to RAM because address 
 INFO: [Synth 8-5545] ROM "inputs_reg[2]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "inputs_reg[1]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "inputs_reg[0]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "inputs_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "inputs_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "inputs_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "inputs_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -252,7 +255,7 @@ INFO: [Synth 8-5545] ROM "inputs_reg[0]" won't be mapped to RAM because address 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'an_reg' using encoding 'sequential' in module 'sevensegment'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:21 . Memory (MB): peak = 826.273 ; gain = 516.848
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 826.410 ; gain = 516.301
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -266,12 +269,20 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 2     
-	  15 Input     20 Bit       Adders := 1     
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input     19 Bit       Adders := 2     
+	   2 Input     18 Bit       Adders := 4     
+	   2 Input     17 Bit       Adders := 8     
+	   2 Input     16 Bit       Adders := 1     
 	   2 Input      8 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 8     
 +---Registers : 
 	               32 Bit    Registers := 7     
-	               16 Bit    Registers := 33    
+	               20 Bit    Registers := 2     
+	               19 Bit    Registers := 2     
+	               18 Bit    Registers := 4     
+	               17 Bit    Registers := 9     
+	               16 Bit    Registers := 34    
 	                8 Bit    Registers := 11    
 	                6 Bit    Registers := 1     
 	                5 Bit    Registers := 8     
@@ -279,14 +290,14 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 5     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 5     
-	   2 Input     16 Bit        Muxes := 1     
-	  15 Input     15 Bit        Muxes := 2     
+	   2 Input     17 Bit        Muxes := 1     
+	  16 Input     16 Bit        Muxes := 2     
 	   8 Input      8 Bit        Muxes := 2     
 	   2 Input      5 Bit        Muxes := 6     
 	   3 Input      5 Bit        Muxes := 2     
 	   2 Input      4 Bit        Muxes := 8     
 	   8 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 22    
+	   2 Input      1 Bit        Muxes := 23    
 	   3 Input      1 Bit        Muxes := 22    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -299,10 +310,10 @@ Module Nexys4fpga
 Detailed RTL Component Info : 
 +---Registers : 
 	               32 Bit    Registers := 1     
-	               16 Bit    Registers := 15    
+	               16 Bit    Registers := 16    
 +---Muxes : 
-	  15 Input     15 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 15    
+	  16 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 16    
 Module debounce 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -335,10 +346,10 @@ Detailed RTL Component Info :
 Module control_unit 
 Detailed RTL Component Info : 
 +---Registers : 
-	               16 Bit    Registers := 1     
+	               17 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input     16 Bit        Muxes := 1     
+	   2 Input     17 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
 Module binary_to_bcd 
 Detailed RTL Component Info : 
@@ -355,22 +366,32 @@ Detailed RTL Component Info :
 	   2 Input      1 Bit        Muxes := 2     
 Module sevenseg_outmux 
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
 +---Registers : 
 	               32 Bit    Registers := 1     
-	               16 Bit    Registers := 16    
+	               16 Bit    Registers := 17    
 	                8 Bit    Registers := 1     
 	                5 Bit    Registers := 8     
 	                1 Bit    Registers := 2     
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 2     
-	  15 Input     15 Bit        Muxes := 1     
+	  16 Input     16 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 6     
 	   3 Input      5 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 2     
-Module mean 
+Module mean_v2 
 Detailed RTL Component Info : 
 +---Adders : 
-	  15 Input     20 Bit       Adders := 1     
+	   2 Input     20 Bit       Adders := 1     
+	   2 Input     19 Bit       Adders := 2     
+	   2 Input     18 Bit       Adders := 4     
+	   2 Input     17 Bit       Adders := 8     
++---Registers : 
+	               20 Bit    Registers := 2     
+	               19 Bit    Registers := 2     
+	               18 Bit    Registers := 4     
+	               17 Bit    Registers := 8     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -407,6 +428,7 @@ INFO: [Synth 8-5545] ROM "db_count" won't be mapped to RAM because address size 
 INFO: [Synth 8-5545] ROM "shift_pb0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "clk_cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "an" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "inputs_reg[15]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "inputs_reg[14]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "inputs_reg[13]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "inputs_reg[12]" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -426,8 +448,7 @@ WARNING: [Synth 8-3917] design Nexys4fpga has port JA[7] driven by constant 0
 WARNING: [Synth 8-3917] design Nexys4fpga has port JA[6] driven by constant 0
 WARNING: [Synth 8-3917] design Nexys4fpga has port JA[2] driven by constant 0
 WARNING: [Synth 8-3917] design Nexys4fpga has port JA[1] driven by constant 0
-WARNING: [Synth 8-3331] design mean has unconnected port clk
-WARNING: [Synth 8-3331] design mean has unconnected port reset
+WARNING: [Synth 8-3331] design mean_v2 has unconnected port reset
 INFO: [Synth 8-3886] merging instance 'result_reg[26]' (FDRE) to 'result_reg[31]'
 INFO: [Synth 8-3886] merging instance 'result_reg[19]' (FDRE) to 'result_reg[31]'
 INFO: [Synth 8-3886] merging instance 'result_reg[25]' (FDRE) to 'result_reg[31]'
@@ -438,6 +459,7 @@ INFO: [Synth 8-3886] merging instance 'result_reg[23]' (FDRE) to 'result_reg[31]
 INFO: [Synth 8-3886] merging instance 'result_reg[20]' (FDRE) to 'result_reg[31]'
 INFO: [Synth 8-3886] merging instance 'result_reg[21]' (FDRE) to 'result_reg[31]'
 INFO: [Synth 8-3886] merging instance 'result_reg[22]' (FDRE) to 'result_reg[31]'
+INFO: [Synth 8-3886] merging instance 'result_reg[16]' (FDRE) to 'result_reg[31]'
 INFO: [Synth 8-3886] merging instance 'result_reg[27]' (FDRE) to 'result_reg[31]'
 INFO: [Synth 8-3886] merging instance 'result_reg[28]' (FDRE) to 'result_reg[31]'
 INFO: [Synth 8-3886] merging instance 'result_reg[29]' (FDRE) to 'result_reg[31]'
@@ -457,7 +479,6 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\OUTMUX/d
 INFO: [Synth 8-3886] merging instance 'OUTMUX/dig3_reg[4]' (FDR) to 'OUTMUX/dig2_reg[4]'
 INFO: [Synth 8-3886] merging instance 'OUTMUX/dig2_reg[4]' (FDR) to 'OUTMUX/dig1_reg[4]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\OUTMUX/dig1_reg[4] )
-INFO: [Synth 8-3886] merging instance 'OUTMUX/leds_reg[4]' (FDS) to 'OUTMUX/leds_reg[15]'
 INFO: [Synth 8-3886] merging instance 'OUTMUX/leds_reg[5]' (FDS) to 'OUTMUX/leds_reg[15]'
 INFO: [Synth 8-3886] merging instance 'OUTMUX/leds_reg[6]' (FDS) to 'OUTMUX/leds_reg[15]'
 INFO: [Synth 8-3886] merging instance 'OUTMUX/leds_reg[7]' (FDS) to 'OUTMUX/leds_reg[15]'
@@ -490,11 +511,16 @@ WARNING: [Synth 8-3332] Sequential element (OUTMUX/result_dly_reg[20]) is unused
 WARNING: [Synth 8-3332] Sequential element (OUTMUX/result_dly_reg[19]) is unused and will be removed from module Nexys4fpga.
 WARNING: [Synth 8-3332] Sequential element (OUTMUX/result_dly_reg[18]) is unused and will be removed from module Nexys4fpga.
 WARNING: [Synth 8-3332] Sequential element (OUTMUX/result_dly_reg[17]) is unused and will be removed from module Nexys4fpga.
+WARNING: [Synth 8-3332] Sequential element (OUTMUX/result_dly_reg[16]) is unused and will be removed from module Nexys4fpga.
 WARNING: [Synth 8-3332] Sequential element (OUTMUX/dig4_reg[4]) is unused and will be removed from module Nexys4fpga.
 WARNING: [Synth 8-3332] Sequential element (OUTMUX/dig1_reg[4]) is unused and will be removed from module Nexys4fpga.
+WARNING: [Synth 8-3332] Sequential element (u_mean/sums_reg[0][3]) is unused and will be removed from module Nexys4fpga.
+WARNING: [Synth 8-3332] Sequential element (u_mean/sums_reg[0][2]) is unused and will be removed from module Nexys4fpga.
+WARNING: [Synth 8-3332] Sequential element (u_mean/sums_reg[0][1]) is unused and will be removed from module Nexys4fpga.
+WARNING: [Synth 8-3332] Sequential element (u_mean/sums_reg[0][0]) is unused and will be removed from module Nexys4fpga.
 WARNING: [Synth 8-3332] Sequential element (result_reg[30]) is unused and will be removed from module Nexys4fpga.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 826.273 ; gain = 516.848
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 826.410 ; gain = 516.301
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -505,16 +531,20 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5578] Moved timing constraint from pin 'generated_clock/clk_out1' to pin 'generated_clock/bbstub_clk_out1/O'
-INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
+INFO: [Synth 8-5578] Moved timing constraint from pin 'generated_clock/clk_100' to pin 'generated_clock/bbstub_clk_100/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'generated_clock/clk_110' to pin 'generated_clock/bbstub_clk_110/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'generated_clock/clk_157' to pin 'generated_clock/bbstub_clk_157/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'generated_clock/clk_183' to pin 'generated_clock/bbstub_clk_183/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'generated_clock/clk_220' to pin 'generated_clock/bbstub_clk_220/O'
+INFO: [Synth 8-5819] Moved 5 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:37 . Memory (MB): peak = 826.273 ; gain = 516.848
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 826.410 ; gain = 516.301
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:41 . Memory (MB): peak = 886.906 ; gain = 577.480
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:34 . Memory (MB): peak = 879.859 ; gain = 569.750
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -525,215 +555,27 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-RETIMING: forward move fails for register inputs_reg[7][14] along load instance i_456 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[0][14] along load instance i_424 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[8][14] along load instance i_456
-RETIMING: forward move fails for register inputs_reg[9][14] along load instance i_456
-RETIMING: forward move fails for register inputs_reg[10][14] along load instance i_440 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[11][14] along load instance i_440
-RETIMING: forward move fails for register inputs_reg[14][14] along load instance i_424
-RETIMING: forward move fails for register inputs_reg[13][14] along load instance i_424
-RETIMING: forward move fails for register inputs_reg[12][14] along load instance i_440
-RETIMING: forward move fails for register inputs_reg[7][13] along load instance i_455 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[0][13] along load instance i_423 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[9][13] along load instance i_455
-RETIMING: forward move fails for register inputs_reg[8][13] along load instance i_455
-RETIMING: forward move fails for register inputs_reg[10][13] along load instance i_439 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[11][13] along load instance i_439
-RETIMING: forward move fails for register inputs_reg[14][13] along load instance i_423
-RETIMING: forward move fails for register inputs_reg[13][13] along load instance i_423
-RETIMING: forward move fails for register inputs_reg[12][13] along load instance i_439
-RETIMING: forward move fails for register inputs_reg[7][12] along load instance i_454 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[0][12] along load instance i_422 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[14][12] along load instance i_422
-RETIMING: forward move fails for register inputs_reg[9][12] along load instance i_454
-RETIMING: forward move fails for register inputs_reg[8][12] along load instance i_454
-RETIMING: forward move fails for register inputs_reg[10][12] along load instance i_438 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[11][12] along load instance i_438
-RETIMING: forward move fails for register inputs_reg[13][12] along load instance i_422
-RETIMING: forward move fails for register inputs_reg[12][12] along load instance i_438
-RETIMING: forward move fails for register inputs_reg[9][11] along load instance i_453 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[8][11] along load instance i_453
-RETIMING: forward move fails for register inputs_reg[10][11] along load instance i_437 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[11][11] along load instance i_437
-RETIMING: forward move fails for register inputs_reg[14][11] along load instance i_421 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[13][11] along load instance i_421
-RETIMING: forward move fails for register inputs_reg[12][11] along load instance i_437
-RETIMING: forward move fails for register inputs_reg[0][11] along load instance i_421
-RETIMING: forward move fails for register inputs_reg[7][11] along load instance i_453
-RETIMING: forward move fails for register inputs_reg[7][0] along load instance i_701 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[0][0] along load instance i_669 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[14][0] along load instance i_669
-RETIMING: forward move fails for register inputs_reg[11][0] along load instance i_685 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[10][0] along load instance i_685
-RETIMING: forward move fails for register inputs_reg[9][0] along load instance i_701
-RETIMING: forward move fails for register inputs_reg[8][0] along load instance i_701
-RETIMING: forward move fails for register inputs_reg[13][0] along load instance i_669
-RETIMING: forward move fails for register inputs_reg[12][0] along load instance i_685
-RETIMING: forward move fails for register inputs_reg[7][14] along load instance i_456 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[0][14] along load instance i_424 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[8][14] along load instance i_456
-RETIMING: forward move fails for register inputs_reg[9][14] along load instance i_456
-RETIMING: forward move fails for register inputs_reg[10][14] along load instance i_440 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[11][14] along load instance i_440
-RETIMING: forward move fails for register inputs_reg[14][14] along load instance i_424
-RETIMING: forward move fails for register inputs_reg[13][14] along load instance i_424
-RETIMING: forward move fails for register inputs_reg[12][14] along load instance i_440
-RETIMING: forward move fails for register inputs_reg[7][13] along load instance i_455 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[0][13] along load instance i_423 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[9][13] along load instance i_455
-RETIMING: forward move fails for register inputs_reg[8][13] along load instance i_455
-RETIMING: forward move fails for register inputs_reg[10][13] along load instance i_439 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[11][13] along load instance i_439
-RETIMING: forward move fails for register inputs_reg[14][13] along load instance i_423
-RETIMING: forward move fails for register inputs_reg[13][13] along load instance i_423
-RETIMING: forward move fails for register inputs_reg[12][13] along load instance i_439
-RETIMING: forward move fails for register inputs_reg[7][12] along load instance i_454 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[0][12] along load instance i_422 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[14][12] along load instance i_422
-RETIMING: forward move fails for register inputs_reg[9][12] along load instance i_454
-RETIMING: forward move fails for register inputs_reg[8][12] along load instance i_454
-RETIMING: forward move fails for register inputs_reg[10][12] along load instance i_438 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[11][12] along load instance i_438
-RETIMING: forward move fails for register inputs_reg[13][12] along load instance i_422
-RETIMING: forward move fails for register inputs_reg[12][12] along load instance i_438
-RETIMING: forward move fails for register inputs_reg[9][11] along load instance i_453 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[8][11] along load instance i_453
-RETIMING: forward move fails for register inputs_reg[10][11] along load instance i_437 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[11][11] along load instance i_437
-RETIMING: forward move fails for register inputs_reg[14][11] along load instance i_421 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[13][11] along load instance i_421
-RETIMING: forward move fails for register inputs_reg[12][11] along load instance i_437
-RETIMING: forward move fails for register inputs_reg[0][11] along load instance i_421
-RETIMING: forward move fails for register inputs_reg[7][11] along load instance i_453
-RETIMING: forward move fails for register inputs_reg[7][0] along load instance i_701 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[0][0] along load instance i_669 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[14][0] along load instance i_669
-RETIMING: forward move fails for register inputs_reg[11][0] along load instance i_685 due to (UNCOMPATIBLE REGISTERS)
-RETIMING: forward move fails for register inputs_reg[10][0] along load instance i_685
-RETIMING: forward move fails for register inputs_reg[9][0] along load instance i_701
-RETIMING: forward move fails for register inputs_reg[8][0] along load instance i_701
-RETIMING: forward move fails for register inputs_reg[13][0] along load instance i_669
-RETIMING: forward move fails for register inputs_reg[12][0] along load instance i_685
 INFO: [Synth 8-5816] Retiming module `Nexys4fpga`
-	Effective logic levels on critical path before retiming is: 24
-	Total number of crtical paths = 9
+	Effective logic levels on critical path before retiming is: 5
+	Total number of crtical paths = 847
 
 	Optimizing at the module level
+	Cannot find a feasible solution:
+		Effective logic levels from SSB/clk_cnt_reg[4] to SSB/clk_cnt_reg[30] is: 5
+		Effective logic levels from SSB/clk_cnt_reg[30] to SSB/clk_cnt_reg[4] is: 4
+		Effective logic levels found across for latency (=2) is: 9
 	Optimizing locally to improve critical paths(may not reduce worst delay)
 
-	Effective logic levels on critical path after retiming is: 21
-	Total number of crtical paths = 63
-	Numbers of forward move = 0, and backward move = 13
+	Effective logic levels on critical path after retiming is: 5
+	Total number of crtical paths = 847
+	Numbers of forward move = 0, and backward move = 0
 
-	Retimed registers names:
-		result_reg[0]_bret__1
-		result_reg[0]_bret__2
-		result_reg[0]_bret_bret
-		result_reg[0]_bret_bret__0
-		result_reg[0]_bret_bret__10
-		result_reg[0]_bret_bret__11
-		result_reg[0]_bret_bret__2
-		result_reg[0]_bret_bret__4
-		result_reg[0]_bret_bret__5
-		result_reg[0]_bret_bret__6
-		result_reg[0]_bret_bret__8
-		result_reg[0]_bret_bret__9
-		result_reg[0]_bret_bret_bret
-		result_reg[0]_bret_bret_bret__0
-		result_reg[0]_bret_bret_bret__1
-		result_reg[1]_bret
-		result_reg[1]_bret__0
-		result_reg[1]_bret_bret
-		result_reg[1]_bret_bret__0
-		result_reg[1]_bret_bret__1
-		result_reg[1]_bret_bret__10
-		result_reg[1]_bret_bret__11
-		result_reg[1]_bret_bret__12
-		result_reg[1]_bret_bret__2
-		result_reg[1]_bret_bret__4
-		result_reg[1]_bret_bret__5
-		result_reg[1]_bret_bret__6
-		result_reg[1]_bret_bret__7
-		result_reg[1]_bret_bret__8
-		result_reg[1]_bret_bret__9
-		result_reg[1]_bret_bret_bret
-		result_reg[1]_bret_bret_bret__0
-		result_reg[1]_bret_bret_bret__1
-		result_reg[1]_bret_bret_bret__2
-		result_reg[2]_bret__1
-		result_reg[2]_bret__3
-		result_reg[2]_bret__4
-		result_reg[2]_bret_bret
-		result_reg[2]_bret_bret__0
-		result_reg[2]_bret_bret__1
-		result_reg[2]_bret_bret__2
-		result_reg[2]_bret_bret__3
-		result_reg[2]_bret_bret__4
-		result_reg[2]_bret_bret__5
-		result_reg[2]_bret_bret__6
-		result_reg[2]_bret_bret__7
- 
 
 INFO: [Synth 8-5816] Retiming module `Nexys4fpga' done
 
 
-WARNING: [Synth 8-3332] Sequential element (result_reg[2]) is unused and will be removed from module Nexys4fpga.
-WARNING: [Synth 8-3332] Sequential element (result_reg[1]) is unused and will be removed from module Nexys4fpga.
-WARNING: [Synth 8-3332] Sequential element (result_reg[0]) is unused and will be removed from module Nexys4fpga.
-WARNING: [Synth 8-3332] Sequential element (result_reg[0]_bret) is unused and will be removed from module Nexys4fpga.
-WARNING: [Synth 8-3332] Sequential element (result_reg[0]_bret__0) is unused and will be removed from module Nexys4fpga.
-WARNING: [Synth 8-3332] Sequential element (result_reg[0]_bret__3) is unused and will be removed from module Nexys4fpga.
-WARNING: [Synth 8-3332] Sequential element (result_reg[0]_bret__4) is unused and will be removed from module Nexys4fpga.
-WARNING: [Synth 8-3332] Sequential element (result_reg[1]_bret__1) is unused and will be removed from module Nexys4fpga.
-WARNING: [Synth 8-3332] Sequential element (result_reg[1]_bret__2) is unused and will be removed from module Nexys4fpga.
-WARNING: [Synth 8-3332] Sequential element (result_reg[1]_bret__3) is unused and will be removed from module Nexys4fpga.
-WARNING: [Synth 8-3332] Sequential element (result_reg[1]_bret__4) is unused and will be removed from module Nexys4fpga.
-WARNING: [Synth 8-3332] Sequential element (result_reg[0]_bret_bret__1) is unused and will be removed from module Nexys4fpga.
-WARNING: [Synth 8-3332] Sequential element (result_reg[0]_bret_bret__3) is unused and will be removed from module Nexys4fpga.
-WARNING: [Synth 8-3332] Sequential element (result_reg[0]_bret_bret__7) is unused and will be removed from module Nexys4fpga.
-WARNING: [Synth 8-3332] Sequential element (result_reg[0]_bret_bret__12) is unused and will be removed from module Nexys4fpga.
-WARNING: [Synth 8-3332] Sequential element (result_reg[2]_bret) is unused and will be removed from module Nexys4fpga.
-WARNING: [Synth 8-3332] Sequential element (result_reg[2]_bret__0) is unused and will be removed from module Nexys4fpga.
-WARNING: [Synth 8-3332] Sequential element (result_reg[2]_bret__2) is unused and will be removed from module Nexys4fpga.
-WARNING: [Synth 8-3332] Sequential element (result_reg[1]_bret_bret__3) is unused and will be removed from module Nexys4fpga.
-INFO: [Synth 8-3886] merging instance 'result_reg[1]_bret_bret_bret__0' (FDRE) to 'result_reg[2]_bret_bret__3'
-INFO: [Synth 8-3886] merging instance 'result_reg[1]_bret_bret_bret__1' (FDRE) to 'result_reg[2]_bret_bret__4'
-INFO: [Synth 8-3886] merging instance 'result_reg[1]_bret_bret_bret__2' (FDRE) to 'result_reg[5]'
-INFO: [Synth 8-3886] merging instance 'result_reg[1]_bret_bret__5' (FDRE) to 'result_reg[1]_bret_bret__2'
-INFO: [Synth 8-3886] merging instance 'result_reg[1]_bret_bret__6' (FDRE) to 'result_reg[2]_bret_bret__6'
-INFO: [Synth 8-3886] merging instance 'result_reg[1]_bret_bret__7' (FDRE) to 'result_reg[2]_bret_bret__4'
-INFO: [Synth 8-3886] merging instance 'result_reg[1]_bret_bret__8' (FDSE) to 'result_reg[2]_bret_bret__7'
-INFO: [Synth 8-3886] merging instance 'result_reg[1]_bret_bret__9' (FDRE) to 'result_reg[1]_bret_bret__4'
-INFO: [Synth 8-3886] merging instance 'result_reg[1]_bret_bret' (FDRE) to 'result_reg[2]_bret_bret__4'
-INFO: [Synth 8-3886] merging instance 'result_reg[1]_bret_bret__0' (FDRE) to 'result_reg[2]_bret_bret__6'
-INFO: [Synth 8-3886] merging instance 'result_reg[1]_bret_bret__1' (FDSE) to 'result_reg[2]_bret_bret__7'
-INFO: [Synth 8-3886] merging instance 'result_reg[1]_bret_bret__2' (FDRE) to 'result_reg[1]_bret_bret__11'
-INFO: [Synth 8-3886] merging instance 'result_reg[1]_bret_bret__4' (FDRE) to 'result_reg[1]_bret_bret__10'
-INFO: [Synth 8-3886] merging instance 'result_reg[1]_bret_bret__12' (FDRE) to 'result_reg[2]_bret_bret__6'
-INFO: [Synth 8-3886] merging instance 'result_reg[1]_bret_bret__11' (FDRE) to 'result_reg[2]_bret__1'
-INFO: [Synth 8-3886] merging instance 'result_reg[1]_bret_bret__10' (FDRE) to 'result_reg[2]_bret__4'
-INFO: [Synth 8-3886] merging instance 'result_reg[0]_bret_bret__10' (FDRE) to 'result_reg[2]_bret__4'
-INFO: [Synth 8-3886] merging instance 'result_reg[0]_bret_bret__5' (FDRE) to 'result_reg[2]_bret__4'
-INFO: [Synth 8-3886] merging instance 'result_reg[0]_bret_bret__6' (FDRE) to 'result_reg[0]_bret_bret__4'
-INFO: [Synth 8-3886] merging instance 'result_reg[0]_bret_bret__9' (FDRE) to 'result_reg[2]_bret_bret__6'
-INFO: [Synth 8-3886] merging instance 'result_reg[0]_bret_bret' (FDRE) to 'result_reg[2]_bret__4'
-INFO: [Synth 8-3886] merging instance 'result_reg[0]_bret_bret__0' (FDRE) to 'result_reg[2]_bret_bret__6'
-INFO: [Synth 8-3886] merging instance 'result_reg[0]_bret_bret__2' (FDRE) to 'result_reg[2]_bret__1'
-INFO: [Synth 8-3886] merging instance 'result_reg[0]_bret_bret__4' (FDRE) to 'result_reg[1]_bret__0'
-INFO: [Synth 8-3886] merging instance 'result_reg[0]_bret_bret_bret' (FDRE) to 'result_reg[2]_bret_bret__6'
-INFO: [Synth 8-3886] merging instance 'result_reg[0]_bret_bret_bret__0' (FDRE) to 'result_reg[2]_bret_bret__4'
-INFO: [Synth 8-3886] merging instance 'result_reg[0]_bret_bret_bret__1' (FDRE) to 'result_reg[2]_bret_bret__3'
-INFO: [Synth 8-3886] merging instance 'result_reg[2]_bret_bret__4' (FDRE) to 'result_reg[2]_bret_bret'
-INFO: [Synth 8-3886] merging instance 'result_reg[2]_bret_bret__5' (FDRE) to 'result_reg[2]_bret_bret__1'
-INFO: [Synth 8-3886] merging instance 'result_reg[2]_bret_bret__6' (FDRE) to 'result_reg[2]_bret_bret__2'
-INFO: [Synth 8-3886] merging instance 'result_reg[2]_bret_bret' (FDRE) to 'result_reg[4]'
-INFO: [Synth 8-3886] merging instance 'result_reg[2]_bret_bret__2' (FDRE) to 'result_reg[2]_bret__3'
-INFO: [Synth 8-3886] merging instance 'result_reg[1]_bret__0' (FDRE) to 'result_reg[0]_bret__1'
-INFO: [Synth 8-3886] merging instance 'result_reg[1]_bret' (FDRE) to 'result_reg[2]_bret__4'
-INFO: [Synth 8-3886] merging instance 'result_reg[2]_bret__1' (FDRE) to 'result_reg[3]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 891.148 ; gain = 581.723
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 880.867 ; gain = 570.758
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -753,11 +595,36 @@ Finished Flattening Before IO Insertion
 ---------------------------------------------------------------------------------
 Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5816] Retiming module `Nexys4fpga`
+	Numbers of forward move = 0, and backward move = 5
+
+	Retimed registers names:
+		SSB/clk_cnt_reg[26]_bret
+		SSB/clk_cnt_reg[26]_bret__0
+		SSB/clk_cnt_reg[28]_bret
+		SSB/clk_cnt_reg[28]_bret__0
+		SSB/clk_cnt_reg[29]_bret
+		SSB/clk_cnt_reg[29]_bret__0
+		SSB/clk_cnt_reg[30]_bret
+		SSB/clk_cnt_reg[30]_bret__0
+		SSB/clk_cnt_reg[31]_bret
+		SSB/clk_cnt_reg[31]_bret__0
+ 
+
+INFO: [Synth 8-5816] Retiming module `Nexys4fpga' done
+
+
+WARNING: [Synth 8-3332] Sequential element (SSB/clk_cnt_reg[31]) is unused and will be removed from module Nexys4fpga.
+WARNING: [Synth 8-3332] Sequential element (SSB/clk_cnt_reg[30]) is unused and will be removed from module Nexys4fpga.
+WARNING: [Synth 8-3332] Sequential element (SSB/clk_cnt_reg[29]) is unused and will be removed from module Nexys4fpga.
+WARNING: [Synth 8-3332] Sequential element (SSB/clk_cnt_reg[28]) is unused and will be removed from module Nexys4fpga.
+WARNING: [Synth 8-3332] Sequential element (SSB/clk_cnt_reg[26]) is unused and will be removed from module Nexys4fpga.
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-4442] BlackBox module generated_clock has unconnected pin reset
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 891.148 ; gain = 581.723
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 880.867 ; gain = 570.758
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -770,7 +637,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 891.148 ; gain = 581.723
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 880.867 ; gain = 570.758
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -782,25 +649,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 891.148 ; gain = 581.723
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 880.867 ; gain = 570.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 891.148 ; gain = 581.723
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 880.867 ; gain = 570.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 891.148 ; gain = 581.723
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 880.867 ; gain = 570.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 891.148 ; gain = 581.723
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 880.867 ; gain = 570.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -818,30 +685,31 @@ Report Cell Usage:
 |      |Cell      |Count |
 +------+----------+------+
 |1     |clk_wiz_0 |     1|
-|2     |CARRY4    |    83|
-|3     |LUT1      |    10|
-|4     |LUT2      |    69|
-|5     |LUT3      |   159|
-|6     |LUT4      |   168|
-|7     |LUT5      |   109|
-|8     |LUT6      |   281|
-|9     |MUXF7     |     8|
-|10    |FDRE      |   907|
-|11    |FDSE      |    21|
-|12    |IBUF      |    22|
-|13    |OBUF      |    40|
+|2     |CARRY4    |   125|
+|3     |LUT1      |     7|
+|4     |LUT2      |   317|
+|5     |LUT3      |    19|
+|6     |LUT4      |   119|
+|7     |LUT5      |    86|
+|8     |LUT6      |   175|
+|9     |MUXF7     |    39|
+|10    |MUXF8     |    15|
+|11    |FDRE      |  1213|
+|12    |FDSE      |    22|
+|13    |IBUF      |    22|
+|14    |OBUF      |    40|
 +------+----------+------+
 
 Report Instance Areas: 
 +------+-----------+----------------+------+
 |      |Instance   |Module          |Cells |
 +------+-----------+----------------+------+
-|1     |top        |                |  1878|
-|2     |  CTL      |control_unit    |   183|
-|3     |  DB       |debounce        |   197|
-|4     |  OUTMUX   |sevenseg_outmux |   611|
-|5     |    BINBCD |binary_to_bcd   |   179|
-|6     |  SSB      |sevensegment    |   237|
+|1     |top        |                |  2205|
+|2     |  CTL      |control_unit    |   203|
+|3     |  DB       |debounce        |   193|
+|4     |  OUTMUX   |sevenseg_outmux |   623|
+|5     |    BINBCD |binary_to_bcd   |   166|
+|6     |  SSB      |sevensegment    |   242|
 |7     |    Digit0 |Digit           |    15|
 |8     |    Digit1 |Digit_0         |    14|
 |9     |    Digit2 |Digit_1         |    14|
@@ -850,16 +718,16 @@ Report Instance Areas:
 |12    |    Digit5 |Digit_4         |    14|
 |13    |    Digit6 |Digit_5         |    14|
 |14    |    Digit7 |Digit_6         |    21|
-|15    |  u_mean   |mean            |   322|
+|15    |  u_mean   |mean_v2         |   604|
 +------+-----------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 891.148 ; gain = 581.723
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 880.867 ; gain = 570.758
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 43 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 891.148 ; gain = 217.816
-Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 891.148 ; gain = 581.723
+Synthesis finished with 0 errors, 1 critical warnings and 33 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:28 . Memory (MB): peak = 880.867 ; gain = 207.117
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:37 . Memory (MB): peak = 880.867 ; gain = 570.758
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 113 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 201 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -867,11 +735,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-234 Infos, 49 Warnings, 0 Critical Warnings and 0 Errors encountered.
+208 Infos, 39 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:49 . Memory (MB): peak = 891.148 ; gain = 593.195
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:40 . Memory (MB): peak = 880.867 ; gain = 582.230
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint 'N:/Projects/ECE540_Proj_03/project_3/project_3.runs/synth_1/Nexys4fpga.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Nexys4fpga_utilization_synth.rpt -pb Nexys4fpga_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.072 . Memory (MB): peak = 891.148 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Feb 27 16:21:57 2020...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 880.867 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 28 19:24:57 2020...

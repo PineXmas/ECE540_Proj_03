@@ -17,6 +17,9 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param synth.incrementalSynthesisCache C:/Users/thong/AppData/Local/Temp/.Xil_thong/Vivado-124-caplab10/incrSyn
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -31,7 +34,7 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo n:/Projects/ECE540_Proj_03/project_3/project_3.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib -sv {
-  N:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/imports/hdl/mean.sv
+  N:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/imports/hdl/mean_v2.sv
   N:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/imports/hdl/sevenseg_outmux.sv
   N:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/imports/hdl/nexys4fpga.sv
 }

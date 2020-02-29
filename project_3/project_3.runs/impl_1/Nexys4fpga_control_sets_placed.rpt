@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date         : Thu Feb 27 16:25:13 2020
-| Host         : caplab11 running 64-bit major release  (build 9200)
+| Date         : Fri Feb 28 19:29:13 2020
+| Host         : caplab10 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Nexys4fpga_control_sets_placed.rpt
 | Design       : Nexys4fpga
 | Device       : xc7a100t
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    28 |
-| Unused register locations in slices containing registers |    38 |
+| Number of unique control sets                            |    29 |
+| Unused register locations in slices containing registers |    20 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,9 +34,8 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      8 |            1 |
 |     10 |            1 |
-|    16+ |           26 |
+|    16+ |           28 |
 +--------+--------------+
 
 
@@ -46,49 +45,50 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             218 |           40 |
+| No           | No                    | No                     |             764 |          111 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             714 |           87 |
-| Yes          | No                    | No                     |             210 |           28 |
+| No           | Yes                   | No                     |             764 |           93 |
+| Yes          | No                    | No                     |             208 |           24 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             732 |          122 |
+| Yes          | Yes                   | No                     |             756 |          111 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+--------------------------------+------------------------------------+------------------------------------+------------------+----------------+
-|          Clock Signal          |            Enable Signal           |          Set/Reset Signal          | Slice Load Count | Bel Load Count |
-+--------------------------------+------------------------------------+------------------------------------+------------------+----------------+
-|  generated_clock/inst/clk_out1 |                                    | DB/SS[0]                           |                2 |              8 |
-|  generated_clock/inst/clk_out1 | OUTMUX/BINBCD/bin_reg1             | OUTMUX/BINBCD/done_conversion      |                2 |             10 |
-|  generated_clock/inst/clk_out1 | OUTMUX/BINBCD/bin_reg_0            | OUTMUX/BINBCD/binary_to_bcd_net_14 |                4 |             30 |
-|  generated_clock/inst/clk_out1 | CTL/inputs_reg[10][0][0]           | DB/JA_OBUF[1]                      |                6 |             32 |
-|  generated_clock/inst/clk_out1 | CTL/inputs_reg[11][0][0]           | DB/JA_OBUF[1]                      |                5 |             32 |
-|  generated_clock/inst/clk_out1 | CTL/E[0]                           | DB/JA_OBUF[1]                      |                6 |             32 |
-|  generated_clock/inst/clk_out1 | CTL/inputs_reg[0][15][0]           | DB/JA_OBUF[1]                      |                6 |             32 |
-|  generated_clock/inst/clk_out1 | CTL/Q[1]                           | DB/JA_OBUF[1]                      |                6 |             32 |
-|  generated_clock/inst/clk_out1 | CTL/inputs_reg[1][15][0]           | DB/JA_OBUF[1]                      |                3 |             32 |
-|  generated_clock/inst/clk_out1 | CTL/inputs_reg[13][0][0]           | DB/JA_OBUF[1]                      |                4 |             32 |
-|  generated_clock/inst/clk_out1 | CTL/inputs_reg[2][15][0]           | DB/JA_OBUF[1]                      |                5 |             32 |
-|  generated_clock/inst/clk_out1 | CTL/inputs_reg[3][15][0]           | DB/JA_OBUF[1]                      |                4 |             32 |
-|  generated_clock/inst/clk_out1 | CTL/inputs_reg[4][15][0]           | DB/JA_OBUF[1]                      |                4 |             32 |
-|  generated_clock/inst/clk_out1 | CTL/inputs_reg[8][0][0]            | DB/JA_OBUF[1]                      |                6 |             32 |
-|  generated_clock/inst/clk_out1 | CTL/inputs_reg[5][15][0]           | DB/JA_OBUF[1]                      |                5 |             32 |
-|  generated_clock/inst/clk_out1 | CTL/inputs_reg[7][15][0]           | DB/JA_OBUF[1]                      |                4 |             32 |
-|  generated_clock/inst/clk_out1 | CTL/inputs_reg[6][15][0]           | DB/JA_OBUF[1]                      |                5 |             32 |
-|  generated_clock/inst/clk_out1 | CTL/inputs_reg[9][0][0]            | DB/JA_OBUF[1]                      |                5 |             32 |
-|  generated_clock/inst/clk_out1 | OUTMUX/BINBCD/bin_reg_0            |                                    |                7 |             34 |
-|  generated_clock/inst/clk_out1 | DB/state_reg[15][0]                | DB/JA_OBUF[1]                      |                8 |             34 |
-|  generated_clock/inst/clk_out1 | CTL/Q[0]                           | DB/JA_OBUF[1]                      |               16 |             50 |
-|  generated_clock/inst/clk_out1 |                                    | DB/db_count[31]_i_1_n_0            |                8 |             62 |
-|  generated_clock/inst/clk_out1 | OUTMUX/BINBCD/binary_to_bcd_net_13 | OUTMUX/BINBCD/binary_to_bcd_net_14 |                8 |             64 |
-|  generated_clock/inst/clk_out1 | OUTMUX/BINBCD/binary_to_bcd_net_47 | DB/JA_OBUF[1]                      |               10 |             64 |
-|  generated_clock/inst/clk_out1 |                                    | DB/JA_OBUF[0]                      |                9 |             70 |
-|  generated_clock/inst/clk_out1 | DB/db_count[31]_i_1_n_0            |                                    |               21 |            176 |
-|  generated_clock/inst/clk_out1 |                                    |                                    |               40 |            218 |
-|  generated_clock/inst/clk_out1 |                                    | DB/JA_OBUF[1]                      |               68 |            574 |
-+--------------------------------+------------------------------------+------------------------------------+------------------+----------------+
++-------------------------------+-------------------------------------+-----------------------------------+------------------+----------------+
+|          Clock Signal         |            Enable Signal            |          Set/Reset Signal         | Slice Load Count | Bel Load Count |
++-------------------------------+-------------------------------------+-----------------------------------+------------------+----------------+
+|  generated_clock/inst/clk_220 |                                     | DB/SS[0]                          |                2 |             10 |
+|  generated_clock/inst/clk_220 | OUTMUX/BINBCD/bin_reg1              | OUTMUX/BINBCD/done_conversion     |                3 |             16 |
+|  generated_clock/inst/clk_220 | CTL/inputs_reg[10][0][0]            | DB/JA_OBUF[1]                     |                7 |             32 |
+|  generated_clock/inst/clk_220 | CTL/Q[0]                            | DB/JA_OBUF[1]                     |                7 |             32 |
+|  generated_clock/inst/clk_220 | CTL/inputs_reg[0][0][0]             | DB/JA_OBUF[1]                     |                3 |             32 |
+|  generated_clock/inst/clk_220 | CTL/E[0]                            | DB/JA_OBUF[1]                     |                3 |             32 |
+|  generated_clock/inst/clk_220 | CTL/inputs_reg[11][0][0]            | DB/JA_OBUF[1]                     |                3 |             32 |
+|  generated_clock/inst/clk_220 | CTL/inputs_reg[13][0][0]            | DB/JA_OBUF[1]                     |                2 |             32 |
+|  generated_clock/inst/clk_220 | CTL/inputs_reg[12][15][0]           | DB/JA_OBUF[1]                     |                4 |             32 |
+|  generated_clock/inst/clk_220 | CTL/inputs_reg[14][0][0]            | DB/JA_OBUF[1]                     |                4 |             32 |
+|  generated_clock/inst/clk_220 | CTL/inputs_reg[1][0][0]             | DB/JA_OBUF[1]                     |                3 |             32 |
+|  generated_clock/inst/clk_220 | CTL/inputs_reg[15][0][0]            | DB/JA_OBUF[1]                     |                3 |             32 |
+|  generated_clock/inst/clk_220 | CTL/inputs_reg[2][0][0]             | DB/JA_OBUF[1]                     |                8 |             32 |
+|  generated_clock/inst/clk_220 | CTL/inputs_reg[6][0][0]             | DB/JA_OBUF[1]                     |                2 |             32 |
+|  generated_clock/inst/clk_220 | CTL/inputs_reg[4][0][0]             | DB/JA_OBUF[1]                     |                5 |             32 |
+|  generated_clock/inst/clk_220 | CTL/inputs_reg[5][0][0]             | DB/JA_OBUF[1]                     |                7 |             32 |
+|  generated_clock/inst/clk_220 | CTL/inputs_reg[3][0][0]             | DB/JA_OBUF[1]                     |                6 |             32 |
+|  generated_clock/inst/clk_220 | CTL/inputs_reg[9][0][0]             | DB/JA_OBUF[1]                     |                4 |             32 |
+|  generated_clock/inst/clk_220 | CTL/inputs_reg[7][0][0]             | DB/JA_OBUF[1]                     |                5 |             32 |
+|  generated_clock/inst/clk_220 | OUTMUX/BINBCD/bin_reg[15]_i_1_n_0   |                                   |                9 |             32 |
+|  generated_clock/inst/clk_220 | OUTMUX/BINBCD/bin_reg[15]_i_1_n_0   | OUTMUX/BINBCD/bin_reg[31]_i_1_n_0 |                3 |             32 |
+|  generated_clock/inst/clk_220 | DB/state_reg[16][0]                 | DB/JA_OBUF[1]                     |               11 |             36 |
+|  generated_clock/inst/clk_220 |                                     | DB/db_count[31]_i_1_n_0           |                7 |             62 |
+|  generated_clock/inst/clk_220 | DB/E[0]                             | OUTMUX/BINBCD/bcd_reg[31]_i_1_n_0 |                9 |             64 |
+|  generated_clock/inst/clk_220 | OUTMUX/BINBCD/dat_bcd_o[31]_i_1_n_0 | DB/JA_OBUF[1]                     |                9 |             64 |
+|  generated_clock/inst/clk_220 |                                     | DB/JA_OBUF[0]                     |               16 |             80 |
+|  generated_clock/inst/clk_220 | DB/db_count[31]_i_1_n_0             |                                   |               15 |            176 |
+|  generated_clock/inst/clk_220 |                                     | DB/JA_OBUF[1]                     |               68 |            612 |
+|  generated_clock/inst/clk_220 |                                     |                                   |              111 |            764 |
++-------------------------------+-------------------------------------+-----------------------------------+------------------+----------------+
 
 

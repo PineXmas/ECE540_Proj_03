@@ -2,8 +2,8 @@
 # Vivado v2018.2.1 (64-bit)
 # SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
 # IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
-# Start of session at: Thu Feb 27 16:21:01 2020
-# Process ID: 11716
+# Start of session at: Fri Feb 28 19:24:05 2020
+# Process ID: 6612
 # Current directory: N:/Projects/ECE540_Proj_03/project_3/project_3.runs/synth_1
 # Command line: vivado.exe -log Nexys4fpga.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Nexys4fpga.tcl
 # Log file: N:/Projects/ECE540_Proj_03/project_3/project_3.runs/synth_1/Nexys4fpga.vds

@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date             : Thu Feb 27 16:26:55 2020
-| Host             : caplab11 running 64-bit major release  (build 9200)
+| Date             : Fri Feb 28 19:30:57 2020
+| Host             : caplab10 running 64-bit major release  (build 9200)
 | Command          : report_power -file Nexys4fpga_power_routed.rpt -pb Nexys4fpga_power_summary_routed.pb -rpx Nexys4fpga_power_routed.rpx
 | Design           : Nexys4fpga
 | Device           : xc7a100tcsg324-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.232        |
+| Total On-Chip Power (W)  | 0.275        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.135        |
-| Device Static (W)        | 0.097        |
+| Dynamic (W)              | 0.177        |
+| Device Static (W)        | 0.098        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 83.9         |
-| Junction Temperature (C) | 26.1         |
+| Max Ambient (C)          | 83.7         |
+| Junction Temperature (C) | 26.3         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,18 +52,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.005 |        8 |       --- |             --- |
-| Slice Logic    |     0.002 |     1851 |       --- |             --- |
-|   LUT as Logic |     0.002 |      690 |     63400 |            1.09 |
-|   CARRY4       |    <0.001 |       83 |     15850 |            0.52 |
-|   Register     |    <0.001 |      951 |    126800 |            0.75 |
-|   F7/F8 Muxes  |    <0.001 |        8 |     63400 |            0.01 |
-|   Others       |     0.000 |       30 |       --- |             --- |
-| Signals        |     0.002 |     1578 |       --- |             --- |
-| MMCM           |     0.106 |        1 |         6 |           16.67 |
-| I/O            |     0.020 |       63 |       210 |           30.00 |
-| Static Power   |     0.097 |          |           |                 |
-| Total          |     0.232 |          |           |                 |
+| Clocks         |     0.012 |        8 |       --- |             --- |
+| Slice Logic    |     0.003 |     2181 |       --- |             --- |
+|   LUT as Logic |     0.002 |      672 |     63400 |            1.06 |
+|   CARRY4       |    <0.001 |      125 |     15850 |            0.79 |
+|   Register     |    <0.001 |     1246 |    126800 |            0.98 |
+|   F7/F8 Muxes  |    <0.001 |       54 |     63400 |            0.09 |
+|   Others       |     0.000 |       31 |       --- |             --- |
+| Signals        |     0.004 |     1581 |       --- |             --- |
+| MMCM           |     0.112 |        1 |         6 |           16.67 |
+| I/O            |     0.046 |       63 |       210 |           30.00 |
+| Static Power   |     0.098 |          |           |                 |
+| Total          |     0.275 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.025 |       0.010 |      0.015 |
-| Vccaux    |       1.800 |     0.077 |       0.059 |      0.018 |
-| Vcco33    |       3.300 |     0.010 |       0.006 |      0.004 |
+| Vccint    |       1.000 |     0.036 |       0.020 |      0.015 |
+| Vccaux    |       1.800 |     0.081 |       0.063 |      0.018 |
+| Vcco33    |       3.300 |     0.017 |       0.013 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -130,8 +130,8 @@ Table of Contents
 | Clock                | Domain                                  | Constraint (ns) |
 +----------------------+-----------------------------------------+-----------------+
 | clk                  | clk                                     |            10.0 |
-| clk_out1_clk_wiz_0   | generated_clock/inst/clk_out1_clk_wiz_0 |            10.0 |
-| clk_out1_clk_wiz_0_1 | generated_clock/inst/clk_out1_clk_wiz_0 |            10.0 |
+| clk_220_clk_wiz_0    | generated_clock/inst/clk_220_clk_wiz_0  |             4.5 |
+| clk_220_clk_wiz_0_1  | generated_clock/inst/clk_220_clk_wiz_0  |             4.5 |
 | clkfbout_clk_wiz_0   | generated_clock/inst/clkfbout_clk_wiz_0 |            10.0 |
 | clkfbout_clk_wiz_0_1 | generated_clock/inst/clkfbout_clk_wiz_0 |            10.0 |
 | sys_clk_pin          | clk                                     |            10.0 |
@@ -147,12 +147,12 @@ Table of Contents
 +-------------------+-----------+
 | Name              | Power (W) |
 +-------------------+-----------+
-| Nexys4fpga        |     0.135 |
+| Nexys4fpga        |     0.177 |
 |   CTL             |    <0.001 |
-|   DB              |    <0.001 |
-|   OUTMUX          |     0.002 |
-|     BINBCD        |    <0.001 |
-|   SSB             |    <0.001 |
+|   DB              |     0.002 |
+|   OUTMUX          |     0.005 |
+|     BINBCD        |     0.001 |
+|   SSB             |     0.002 |
 |     Digit0        |    <0.001 |
 |     Digit1        |    <0.001 |
 |     Digit2        |    <0.001 |
@@ -161,9 +161,9 @@ Table of Contents
 |     Digit5        |    <0.001 |
 |     Digit6        |    <0.001 |
 |     Digit7        |    <0.001 |
-|   generated_clock |     0.106 |
-|     inst          |     0.106 |
-|   u_mean          |     0.003 |
+|   generated_clock |     0.112 |
+|     inst          |     0.112 |
+|   u_mean          |     0.006 |
 +-------------------+-----------+
 
 

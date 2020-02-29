@@ -34,6 +34,7 @@ module sevenseg_outmux
 	input	[N_INPUTS : 0]	mux_sel,
 	input	[15:0]			operands[N_INPUTS - 1 : 0 ],
 	input		[31:0]		result,		// result from multiply
+	input  integer position,
 	output	reg	[4:0]		dig7, dig6,	// digits for 7-segment display
 							dig5, dig4,	// dig7 is the leftmost digit
 							dig3, dig2,	// dig0 is the rightmost digit
@@ -78,16 +79,31 @@ binary_to_bcd
  );
 
  
- integer position, i;
+// integer position, i;
+ integer i;
+ tri [31:0] position_tri;
+ genvar gen_i;
  wire [15:0] pos;
 
- always@(*)
- begin
- 	position = 0;
- 	for( i = 0; i < N_INPUTS; i = i+1 )
- 		if( mux_sel[i+1] )
- 			position = i;
- end
+//  // ==================================================
+//  // [PROBLEM 1] original code
+//  // ==================================================
+//  always@(*) begin
+//    position = 0;
+//    for( i = 0; i < N_INPUTS; i = i+1 )
+//      if( mux_sel[i+1] )
+//        position = i;
+//  end
+
+//  // ==================================================
+//  // [PROBLEM 1] fix
+//  // ==================================================
+// 	generate
+// 		for( gen_i = 0; gen_i < N_INPUTS; gen_i++)
+// 				assign position_tri = mux_sel[gen_i+1] ? gen_i : 'z;
+// 	endgenerate
+ 	
+// 	assign position = mux_sel[0] ? '0 : position_tri;
 
  assign pos = N_INPUTS - position[15:0];
 // generate the input to the BCD converter.
@@ -132,15 +148,32 @@ end // delay the operands and result registers to detect changes
 
 // implmenent the request BCD conversion logic
 
-always @(*)
-begin
-	cnvt = (result != result_dly);
-	for( i = 0; i < N_INPUTS; i = i + 1)
-		cnvt = cnvt | (operands[i] != operands_dly[i]);
+//  // ==================================================
+//  // [PROBLEM 2] orginal code
+//  // ==================================================
+//  always @(*)
+//  begin
+//    cnvt = (result != result_dly);
+//    for( i = 0; i < N_INPUTS; i = i + 1)
+//      cnvt = cnvt | (operands[i] != operands_dly[i]);
+//  end
+  
+  // ==================================================
+  // [PROBLEM 2] fix
+  // ==================================================
+  
+  reg [N_INPUTS : 0] result_not_equal;
+  int j;
+  
+  // compute intermediate not-equal results 
+  always @(*) begin
+    result_not_equal[N_INPUTS] = result != result_dly;
+    for (i=0; i<N_INPUTS; i++) begin
+      result_not_equal[i] = operands[i] != operands_dly[i];
+    end
+  end
 
-end
-
-//assign cnvt = (operands != operands_dly ) | (result != result_dly) ;
+  assign cnvt = | result_not_equal;
 
 always @(posedge clk) begin
 	if (reset) begin

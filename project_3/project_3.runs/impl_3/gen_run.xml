@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_3" LaunchPart="xc7a100tcsg324-1" LaunchTime="1582948069">
+  <File Type="ROUTE-PWR" Name="Nexys4fpga_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="Nexys4fpga.tcl"/>
+  <File Type="BITSTR-BMM" Name="Nexys4fpga_bd.bmm"/>
+  <File Type="ROUTE-PWR-SUM" Name="Nexys4fpga_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="Nexys4fpga_reports.tcl"/>
+  <File Type="OPT-DCP" Name="Nexys4fpga_opt.dcp"/>
+  <File Type="OPT-DRC" Name="Nexys4fpga_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="Nexys4fpga.hwdef"/>
+  <File Type="PWROPT-DCP" Name="Nexys4fpga_pwropt.dcp"/>
+  <File Type="PLACE-DCP" Name="Nexys4fpga_placed.dcp"/>
+  <File Type="PLACE-IO" Name="Nexys4fpga_io_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="Nexys4fpga_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="Nexys4fpga_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="Nexys4fpga_control_sets_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Nexys4fpga_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BGN" Name="Nexys4fpga.bgn"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Nexys4fpga_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="Nexys4fpga.bin"/>
+  <File Type="PHYSOPT-DCP" Name="Nexys4fpga_physopt.dcp"/>
+  <File Type="BITSTR-MSK" Name="Nexys4fpga.msk"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Nexys4fpga_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="Nexys4fpga_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Nexys4fpga_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="Nexys4fpga_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="Nexys4fpga_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="Nexys4fpga_drc_routed.rpx"/>
+  <File Type="BITSTR-LTX" Name="Nexys4fpga.ltx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Nexys4fpga_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MMI" Name="Nexys4fpga.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Nexys4fpga_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Nexys4fpga_methodology_drc_routed.pb"/>
+  <File Type="BITSTR-SYSDEF" Name="Nexys4fpga.sysdef"/>
+  <File Type="ROUTE-PWR-RPX" Name="Nexys4fpga_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="Nexys4fpga_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="Nexys4fpga_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="Nexys4fpga_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="Nexys4fpga_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="Nexys4fpga_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-CLK" Name="Nexys4fpga_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Nexys4fpga_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="Nexys4fpga_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="Nexys4fpga_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Nexys4fpga_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Nexys4fpga_postroute_physopt_bb.dcp"/>
+  <File Type="BG-BIT" Name="Nexys4fpga.bit"/>
+  <File Type="BITSTR-RBT" Name="Nexys4fpga.rbt"/>
+  <File Type="BITSTR-NKY" Name="Nexys4fpga.nky"/>
+  <File Type="BG-DRC" Name="Nexys4fpga.drc"/>
+  <File Type="RDI-RDI" Name="Nexys4fpga.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/binary_to_bcd.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../ECE540/Projects/project_3/project_3.srcs/sources_1/imports/hdl/binary_to_bcd.v"/>
+        <Attr Name="ImportTime" Val="1541495115"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/control_unit.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../ECE540/Projects/project_3/project_3.srcs/sources_1/imports/hdl/control_unit.v"/>
+        <Attr Name="ImportTime" Val="1550889177"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/debounce.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../ECE540/Projects/project_3/project_3.srcs/sources_1/imports/hdl/debounce.v"/>
+        <Attr Name="ImportTime" Val="1541495115"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/sevensegment.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../ECE540/Projects/project_3/project_3.srcs/sources_1/imports/hdl/sevensegment.v"/>
+        <Attr Name="ImportTime" Val="1541495115"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/mean_v2.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/sevenseg_outmux.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../ECE540/Projects/project_3/project_3.srcs/sources_1/imports/hdl/sevenseg_outmux.sv"/>
+        <Attr Name="ImportTime" Val="1550889059"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/nexys4fpga.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../ECE540/Projects/project_3/project_3.srcs/sources_1/imports/hdl/nexys4fpga.sv"/>
+        <Attr Name="ImportTime" Val="1550976424"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/adder.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/hdl/mean.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../ECE540/Projects/project_3/project_3.srcs/sources_1/imports/hdl/mean.sv"/>
+        <Attr Name="ImportTime" Val="1547357180"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Nexys4fpga"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/constraints/n4DDRfpga.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../ECE540/Projects/project_3/project_3.srcs/constrs_1/imports/constraints/n4DDRfpga.xdc"/>
+        <Attr Name="ImportTime" Val="1541496015"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Performance_ExtraTimingOpt" Flow="Vivado Implementation 2018"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design">
+      <Option Id="Directive">8</Option>
+    </Step>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design" EnableStepBool="1">
+      <Option Id="Directive">0</Option>
+    </Step>
+    <Step Id="route_design">
+      <Option Id="Directive">1</Option>
+    </Step>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
+</GenRun>

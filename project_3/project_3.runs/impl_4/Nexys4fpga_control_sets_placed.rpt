@@ -1,0 +1,87 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
+| Date         : Sat Feb 29 02:24:44 2020
+| Host         : caplab10 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Nexys4fpga_control_sets_placed.rpt
+| Design       : Nexys4fpga
+| Device       : xc7a100t
+---------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    22 |
+| Unused register locations in slices containing registers |    14 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|     14 |            1 |
+|    16+ |           21 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             470 |           64 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             536 |           68 |
+| Yes          | No                    | No                     |             208 |           19 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             484 |           72 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------+-------------------------------------+-----------------------------------+------------------+----------------+
+|          Clock Signal         |            Enable Signal            |          Set/Reset Signal         | Slice Load Count | Bel Load Count |
++-------------------------------+-------------------------------------+-----------------------------------+------------------+----------------+
+|  generated_clock/inst/clk_220 |                                     | CTL/Q[0]                          |                1 |             14 |
+|  generated_clock/inst/clk_220 | OUTMUX/BINBCD/bin_reg1              | OUTMUX/BINBCD/done_conversion     |                3 |             16 |
+|  generated_clock/inst/clk_220 | DB/E[0]                             | DB/JA_OBUF[1]                     |                4 |             20 |
+|  generated_clock/inst/clk_220 |                                     | DB/SS[0]                          |                5 |             32 |
+|  generated_clock/inst/clk_220 | inputs_reg[5]__0                    | DB/JA_OBUF[1]                     |                5 |             32 |
+|  generated_clock/inst/clk_220 | inputs_reg[3]__0                    | DB/JA_OBUF[1]                     |                4 |             32 |
+|  generated_clock/inst/clk_220 | inputs_reg[4]__0                    | DB/JA_OBUF[1]                     |                7 |             32 |
+|  generated_clock/inst/clk_220 | inputs_reg[0]__0                    | DB/JA_OBUF[1]                     |                5 |             32 |
+|  generated_clock/inst/clk_220 | inputs_reg[1]__0                    | DB/JA_OBUF[1]                     |                7 |             32 |
+|  generated_clock/inst/clk_220 | inputs_reg[6]__0                    | DB/JA_OBUF[1]                     |                4 |             32 |
+|  generated_clock/inst/clk_220 | inputs_reg[7]__0                    | DB/JA_OBUF[1]                     |                5 |             32 |
+|  generated_clock/inst/clk_220 | inputs_reg[2]__0                    | DB/JA_OBUF[1]                     |                5 |             32 |
+|  generated_clock/inst/clk_220 | CTL/Q[0]                            | DB/JA_OBUF[1]                     |                4 |             32 |
+|  generated_clock/inst/clk_220 | OUTMUX/BINBCD/bin_reg_0             |                                   |                5 |             32 |
+|  generated_clock/inst/clk_220 | OUTMUX/BINBCD/bin_reg_0             | OUTMUX/BINBCD/bin_reg[31]_i_1_n_0 |                2 |             32 |
+|  generated_clock/inst/clk_220 |                                     | DB/db_count[31]_i_1_n_0           |                8 |             62 |
+|  generated_clock/inst/clk_220 | OUTMUX/BINBCD/bcd_reg[31]_i_2_n_0   | OUTMUX/BINBCD/bcd_reg[31]_i_1_n_0 |                9 |             64 |
+|  generated_clock/inst/clk_220 | OUTMUX/BINBCD/dat_bcd_o[31]_i_1_n_0 | DB/JA_OBUF[1]                     |                8 |             64 |
+|  generated_clock/inst/clk_220 |                                     | DB/JA_OBUF[0]                     |               17 |             80 |
+|  generated_clock/inst/clk_220 | DB/db_count[31]_i_1_n_0             |                                   |               14 |            176 |
+|  generated_clock/inst/clk_220 |                                     | DB/JA_OBUF[1]                     |               37 |            348 |
+|  generated_clock/inst/clk_220 |                                     |                                   |               64 |            470 |
++-------------------------------+-------------------------------------+-----------------------------------+------------------+----------------+
+
+
