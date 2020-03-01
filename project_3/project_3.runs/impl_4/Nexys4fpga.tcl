@@ -67,18 +67,17 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param synth.incrementalSynthesisCache C:/Users/thong/AppData/Local/Temp/.Xil_thong/Vivado-11960-caplab10/incrSyn
   create_project -in_memory -part xc7a100tcsg324-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir N:/Projects/ECE540_Proj_03/project_3/project_3.cache/wt [current_project]
-  set_property parent.project_path N:/Projects/ECE540_Proj_03/project_3/project_3.xpr [current_project]
-  set_property ip_output_repo N:/Projects/ECE540_Proj_03/project_3/project_3.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/Projects/Code/ECE540_Proj_03/project_3/project_3.cache/wt [current_project]
+  set_property parent.project_path D:/Projects/Code/ECE540_Proj_03/project_3/project_3.xpr [current_project]
+  set_property ip_output_repo D:/Projects/Code/ECE540_Proj_03/project_3/project_3.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
-  add_files -quiet N:/Projects/ECE540_Proj_03/project_3/project_3.runs/synth_4_fanout_20/Nexys4fpga.dcp
-  read_ip -quiet N:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-  read_xdc N:/Projects/ECE540_Proj_03/project_3/project_3.srcs/constrs_1/imports/constraints/n4DDRfpga.xdc
+  add_files -quiet D:/Projects/Code/ECE540_Proj_03/project_3/project_3.runs/synth_4_fanout_20/Nexys4fpga.dcp
+  read_ip -quiet D:/Projects/Code/ECE540_Proj_03/project_3/project_3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  read_xdc D:/Projects/Code/ECE540_Proj_03/project_3/project_3.srcs/constrs_1/imports/constraints/n4DDRfpga.xdc
   link_design -top Nexys4fpga -part xc7a100tcsg324-1
   close_msg_db -file init_design.pb
 } RESULT]

@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date             : Sat Feb 29 02:25:24 2020
-| Host             : caplab10 running 64-bit major release  (build 9200)
+| Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date             : Sat Feb 29 22:44:52 2020
+| Host             : Pine-Ripper running 64-bit major release  (build 9200)
 | Command          : report_power -file Nexys4fpga_power_routed.rpt -pb Nexys4fpga_power_summary_routed.pb -rpx Nexys4fpga_power_routed.rpx
 | Design           : Nexys4fpga
 | Device           : xc7a100tcsg324-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.265        |
+| Total On-Chip Power (W)  | 0.268        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.168        |
+| Dynamic (W)              | 0.170        |
 | Device Static (W)        | 0.098        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 83.8         |
@@ -52,18 +52,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.009 |        8 |       --- |             --- |
-| Slice Logic    |     0.001 |     1453 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      419 |     63400 |            0.66 |
-|   Register     |    <0.001 |      849 |    126800 |            0.67 |
+| Clocks         |     0.010 |        8 |       --- |             --- |
+| Slice Logic    |     0.001 |     1481 |       --- |             --- |
+|   LUT as Logic |     0.001 |      421 |     63400 |            0.66 |
+|   Register     |    <0.001 |      874 |    126800 |            0.69 |
 |   CARRY4       |    <0.001 |       72 |     15850 |            0.45 |
 |   F7/F8 Muxes  |    <0.001 |       22 |     63400 |            0.03 |
-|   Others       |     0.000 |       36 |       --- |             --- |
-| Signals        |     0.003 |     1071 |       --- |             --- |
+|   Others       |     0.000 |       35 |       --- |             --- |
+| Signals        |     0.002 |     1091 |       --- |             --- |
 | MMCM           |     0.112 |        1 |         6 |           16.67 |
-| I/O            |     0.043 |       63 |       210 |           30.00 |
+| I/O            |     0.045 |       63 |       210 |           30.00 |
 | Static Power   |     0.098 |          |           |                 |
-| Total          |     0.265 |          |           |                 |
+| Total          |     0.268 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.029 |       0.014 |      0.015 |
+| Vccint    |       1.000 |     0.030 |       0.015 |      0.015 |
 | Vccaux    |       1.800 |     0.081 |       0.063 |      0.018 |
-| Vcco33    |       3.300 |     0.016 |       0.012 |      0.004 |
+| Vcco33    |       3.300 |     0.017 |       0.013 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -147,7 +147,7 @@ Table of Contents
 +-------------------+-----------+
 | Name              | Power (W) |
 +-------------------+-----------+
-| Nexys4fpga        |     0.168 |
+| Nexys4fpga        |     0.170 |
 |   CTL             |    <0.001 |
 |   DB              |     0.002 |
 |   OUTMUX          |     0.004 |

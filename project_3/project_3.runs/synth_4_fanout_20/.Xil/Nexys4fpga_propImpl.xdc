@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:N:/Projects/ECE540_Proj_03/project_3/project_3.srcs/constrs_1/imports/constraints/n4DDRfpga.xdc rfile:../../../project_3.srcs/constrs_1/imports/constraints/n4DDRfpga.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/Projects/Code/ECE540_Proj_03/project_3/project_3.srcs/constrs_1/imports/constraints/n4DDRfpga.xdc rfile:../../../project_3.srcs/constrs_1/imports/constraints/n4DDRfpga.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:11 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN E3 IOSTANDARD LVCMOS33} [get_ports clk]
 set_property src_info {type:XDC file:1 line:16 export:INPUT save:INPUT read:READ} [current_design]

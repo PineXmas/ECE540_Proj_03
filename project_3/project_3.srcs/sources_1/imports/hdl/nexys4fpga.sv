@@ -187,7 +187,7 @@ module Nexys4fpga (
     // Clock out ports
     .clk_220(clk_100),     // output clk_out1
     // Status and control signals
-    //.reset(sys_reset), // input reset
+    .reset(sysreset), // input reset
    // Clock in ports
     .clk_in1(clk)
     );      // input clk_in1

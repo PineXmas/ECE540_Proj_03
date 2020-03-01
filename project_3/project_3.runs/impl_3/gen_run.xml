@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_3" LaunchPart="xc7a100tcsg324-1" LaunchTime="1582948069">
+  <File Type="BITSTR-BMM" Name="Nexys4fpga_bd.bmm"/>
   <File Type="ROUTE-PWR" Name="Nexys4fpga_power_routed.rpt"/>
   <File Type="PA-TCL" Name="Nexys4fpga.tcl"/>
-  <File Type="BITSTR-BMM" Name="Nexys4fpga_bd.bmm"/>
+  <File Type="OPT-DCP" Name="Nexys4fpga_opt.dcp"/>
   <File Type="ROUTE-PWR-SUM" Name="Nexys4fpga_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="Nexys4fpga_reports.tcl"/>
-  <File Type="OPT-DCP" Name="Nexys4fpga_opt.dcp"/>
   <File Type="OPT-DRC" Name="Nexys4fpga_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="Nexys4fpga.hwdef"/>
   <File Type="PWROPT-DCP" Name="Nexys4fpga_pwropt.dcp"/>
@@ -25,19 +25,20 @@
   <File Type="ROUTE-BLACKBOX-DCP" Name="Nexys4fpga_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="Nexys4fpga_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="Nexys4fpga_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="Nexys4fpga_drc_routed.rpx"/>
   <File Type="BITSTR-LTX" Name="Nexys4fpga.ltx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="Nexys4fpga_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="Nexys4fpga_drc_routed.rpx"/>
   <File Type="BITSTR-MMI" Name="Nexys4fpga.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Nexys4fpga_methodology_drc_routed.rpt"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Nexys4fpga_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Nexys4fpga_methodology_drc_routed.pb"/>
   <File Type="BITSTR-SYSDEF" Name="Nexys4fpga.sysdef"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Nexys4fpga_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="Nexys4fpga_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="Nexys4fpga_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="Nexys4fpga_route_status.pb"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="Nexys4fpga_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="Nexys4fpga_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="Nexys4fpga_timing_summary_routed.rpx"/>
+  <File Type="RDI-RDI" Name="Nexys4fpga.vdi"/>
   <File Type="ROUTE-CLK" Name="Nexys4fpga_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW" Name="Nexys4fpga_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="Nexys4fpga_bus_skew_routed.pb"/>
@@ -48,7 +49,6 @@
   <File Type="BITSTR-RBT" Name="Nexys4fpga.rbt"/>
   <File Type="BITSTR-NKY" Name="Nexys4fpga.nky"/>
   <File Type="BG-DRC" Name="Nexys4fpga.drc"/>
-  <File Type="RDI-RDI" Name="Nexys4fpga.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>

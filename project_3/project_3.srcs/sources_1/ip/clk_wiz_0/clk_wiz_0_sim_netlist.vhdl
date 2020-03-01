@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
--- Date        : Fri Feb 28 18:23:45 2020
--- Host        : caplab10 running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+-- Date        : Sat Feb 29 22:05:07 2020
+-- Host        : Pine-Ripper running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               N:/Projects/ECE540_Proj_03/project_3/project_3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.vhdl
+--               D:/Projects/Code/ECE540_Proj_03/project_3/project_3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.vhdl
 -- Design      : clk_wiz_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -22,7 +22,6 @@ entity clk_wiz_0_clk_wiz_0_clk_wiz is
     clk_183 : out STD_LOGIC;
     clk_220 : out STD_LOGIC;
     reset : in STD_LOGIC;
-    locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
@@ -48,6 +47,7 @@ architecture STRUCTURE of clk_wiz_0_clk_wiz_0_clk_wiz is
   signal NLW_mmcm_adv_inst_CLKOUT5_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT6_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_DRDY_UNCONNECTED : STD_LOGIC;
+  signal NLW_mmcm_adv_inst_LOCKED_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_PSDONE_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_DO_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   attribute BOX_TYPE : string;
@@ -182,7 +182,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       DO(15 downto 0) => NLW_mmcm_adv_inst_DO_UNCONNECTED(15 downto 0),
       DRDY => NLW_mmcm_adv_inst_DRDY_UNCONNECTED,
       DWE => '0',
-      LOCKED => locked,
+      LOCKED => NLW_mmcm_adv_inst_LOCKED_UNCONNECTED,
       PSCLK => '0',
       PSDONE => NLW_mmcm_adv_inst_PSDONE_UNCONNECTED,
       PSEN => '0',
@@ -203,7 +203,6 @@ entity clk_wiz_0 is
     clk_183 : out STD_LOGIC;
     clk_220 : out STD_LOGIC;
     reset : in STD_LOGIC;
-    locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
@@ -220,7 +219,6 @@ inst: entity work.clk_wiz_0_clk_wiz_0_clk_wiz
       clk_183 => clk_183,
       clk_220 => clk_220,
       clk_in1 => clk_in1,
-      locked => locked,
       reset => reset
     );
 end STRUCTURE;

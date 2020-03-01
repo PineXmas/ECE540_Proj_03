@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
-# Vivado v2018.2.1 (64-bit)
-# SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
-# IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
-# Start of session at: Sat Feb 29 02:23:00 2020
-# Process ID: 5600
-# Current directory: N:/Projects/ECE540_Proj_03/project_3/project_3.runs/synth_4_fanout_20
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Feb 29 22:42:34 2020
+# Process ID: 26616
+# Current directory: D:/Projects/Code/ECE540_Proj_03/project_3/project_3.runs/synth_4_fanout_20
 # Command line: vivado.exe -log Nexys4fpga.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Nexys4fpga.tcl
-# Log file: N:/Projects/ECE540_Proj_03/project_3/project_3.runs/synth_4_fanout_20/Nexys4fpga.vds
-# Journal file: N:/Projects/ECE540_Proj_03/project_3/project_3.runs/synth_4_fanout_20\vivado.jou
+# Log file: D:/Projects/Code/ECE540_Proj_03/project_3/project_3.runs/synth_4_fanout_20/Nexys4fpga.vds
+# Journal file: D:/Projects/Code/ECE540_Proj_03/project_3/project_3.runs/synth_4_fanout_20\vivado.jou
 #-----------------------------------------------------------
 source Nexys4fpga.tcl -notrace

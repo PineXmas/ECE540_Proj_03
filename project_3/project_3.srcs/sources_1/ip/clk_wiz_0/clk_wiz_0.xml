@@ -1333,7 +1333,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:fe8d5432</spirit:value>
+            <spirit:value>8:0898e436</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1349,11 +1349,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Feb 29 02:22:56 UTC 2020</spirit:value>
+            <spirit:value>Sun Mar 01 06:04:27 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:7f9d2b38</spirit:value>
+            <spirit:value>8:b58bf49b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1368,11 +1368,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Feb 29 02:22:57 UTC 2020</spirit:value>
+            <spirit:value>Sun Mar 01 06:04:27 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:7f9d2b38</spirit:value>
+            <spirit:value>8:b58bf49b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1387,11 +1387,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Feb 29 02:22:57 UTC 2020</spirit:value>
+            <spirit:value>Sun Mar 01 06:04:28 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:7f9d2b38</spirit:value>
+            <spirit:value>8:b58bf49b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1406,11 +1406,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Feb 29 02:22:57 UTC 2020</spirit:value>
+            <spirit:value>Sun Mar 01 06:04:27 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:a53f1059</spirit:value>
+            <spirit:value>8:835b5b3a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1425,11 +1425,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Feb 29 02:22:57 UTC 2020</spirit:value>
+            <spirit:value>Sun Mar 01 06:04:28 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:a53f1059</spirit:value>
+            <spirit:value>8:835b5b3a</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1443,11 +1443,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Feb 29 02:22:58 UTC 2020</spirit:value>
+            <spirit:value>Sun Mar 01 06:04:28 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:7f9d2b38</spirit:value>
+            <spirit:value>8:b58bf49b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1461,11 +1461,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Feb 29 02:22:58 UTC 2020</spirit:value>
+            <spirit:value>Sun Mar 01 06:04:28 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:7f9d2b38</spirit:value>
+            <spirit:value>8:b58bf49b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1479,11 +1479,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sat Feb 29 02:23:45 UTC 2020</spirit:value>
+            <spirit:value>Sun Mar 01 06:05:07 UTC 2020</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>8:7f9d2b38</spirit:value>
+            <spirit:value>8:b58bf49b</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -2451,19 +2451,6 @@
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
-      <spirit:port>
-        <spirit:name>locked</spirit:name>
-        <spirit:wire>
-          <spirit:direction>out</spirit:direction>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic</spirit:typeName>
-              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
-              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
     </spirit:ports>
     <spirit:modelParameters>
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="INTEGER">
@@ -2680,7 +2667,7 @@
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="INTEGER">
         <spirit:name>C_USE_LOCKED</spirit:name>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_USE_LOCKED" spirit:order="228">1</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_USE_LOCKED" spirit:order="228">0</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="INTEGER">
         <spirit:name>C_USE_INCLK_STOPPED</spirit:name>
@@ -4531,7 +4518,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>USE_LOCKED</spirit:name>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.USE_LOCKED" spirit:order="103" spirit:configGroups="0 NoDisplay">true</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.USE_LOCKED" spirit:order="103" spirit:configGroups="0 NoDisplay">false</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>CALC_DONE</spirit:name>

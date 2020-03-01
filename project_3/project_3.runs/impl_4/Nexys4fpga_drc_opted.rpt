@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
-| Date         : Sat Feb 29 02:24:27 2020
-| Host         : caplab10 running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Sat Feb 29 22:43:55 2020
+| Host         : Pine-Ripper running 64-bit major release  (build 9200)
 | Command      : report_drc -file Nexys4fpga_drc_opted.rpt -pb Nexys4fpga_drc_opted.pb -rpx Nexys4fpga_drc_opted.rpx
 | Design       : Nexys4fpga
 | Device       : xc7a100tcsg324-1

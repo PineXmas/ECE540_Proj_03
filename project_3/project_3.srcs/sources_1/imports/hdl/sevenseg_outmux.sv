@@ -34,7 +34,7 @@ module sevenseg_outmux
 	input	[N_INPUTS : 0]	mux_sel,
 	input	[15:0]			operands[N_INPUTS - 1 : 0 ],
 	input		[31:0]		result,		// result from multiply
-	input  integer position,
+	input  integer          position,
 	output	reg	[4:0]		dig7, dig6,	// digits for 7-segment display
 							dig5, dig4,	// dig7 is the leftmost digit
 							dig3, dig2,	// dig0 is the rightmost digit
@@ -96,7 +96,7 @@ binary_to_bcd
 //  end
 
 //  // ==================================================
-//  // [PROBLEM 1] fix
+//  // [PROBLEM 1] fix 1
 //  // ==================================================
 // 	generate
 // 		for( gen_i = 0; gen_i < N_INPUTS; gen_i++)
@@ -104,6 +104,10 @@ binary_to_bcd
 // 	endgenerate
  	
 // 	assign position = mux_sel[0] ? '0 : position_tri;
+
+  // ==================================================
+  // [PROBLEM 1] fix 2: by using directly "position" signal from outside
+  // ==================================================
 
  assign pos = N_INPUTS - position[15:0];
 // generate the input to the BCD converter.
@@ -165,15 +169,25 @@ end // delay the operands and result registers to detect changes
   reg [N_INPUTS : 0] result_not_equal;
   int j;
   
-  // compute intermediate not-equal results 
-  always @(*) begin
-    result_not_equal[N_INPUTS] = result != result_dly;
+  // compute intermediate not-equal results, as register
+//  always @(*) begin
+//    result_not_equal[N_INPUTS] = result != result_dly;
+//    for (i=0; i<N_INPUTS; i++) begin
+//      result_not_equal[i] = operands[i] != operands_dly[i];
+//    end
+//  end
+  always @(posedge clk) begin
+    result_not_equal[N_INPUTS] <= result != result_dly;
+    
     for (i=0; i<N_INPUTS; i++) begin
-      result_not_equal[i] = operands[i] != operands_dly[i];
+      result_not_equal[i] <= operands[i] != operands_dly[i];
     end
   end
-
-  assign cnvt = | result_not_equal;
+  
+  // compute cnvt signal as a register
+  always @(posedge clk) begin
+    cnvt <= | result_not_equal;
+  end 
 
 always @(posedge clk) begin
 	if (reset) begin
