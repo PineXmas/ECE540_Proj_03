@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<Runs Version="1" Minor="0">
-	<Run Id="synth_4_fanout_20" LaunchDir="N:/Projects/ECE540_Proj_03/project_3/project_3.runs/synth_4_fanout_20" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
-	<Run Id="impl_4" LaunchDir="N:/Projects/ECE540_Proj_03/project_3/project_3.runs/impl_4" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="route_design">
-		<Parent Id="synth_4_fanout_20"/>
-	</Run>
-</Runs>
-

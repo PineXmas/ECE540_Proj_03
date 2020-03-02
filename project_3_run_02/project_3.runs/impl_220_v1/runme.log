@@ -1,0 +1,1417 @@
+
+*** Running vivado
+    with args -log nexys4fpga_v1.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source nexys4fpga_v1.tcl -notrace
+
+
+****** Vivado v2018.2 (64-bit)
+  **** SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+  **** IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source nexys4fpga_v1.tcl -notrace
+Command: link_design -top nexys4fpga_v1 -part xc7a100tcsg324-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Project 1-454] Reading design checkpoint 'd:/Projects/Code/ece540w20_proj3_r1_1/project_3/project_3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'generated_clock'
+INFO: [Netlist 29-17] Analyzing 145 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [d:/Projects/Code/ece540w20_proj3_r1_1/project_3/project_3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'generated_clock/inst'
+Finished Parsing XDC File [d:/Projects/Code/ece540w20_proj3_r1_1/project_3/project_3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'generated_clock/inst'
+Parsing XDC File [d:/Projects/Code/ece540w20_proj3_r1_1/project_3/project_3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'generated_clock/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/Projects/Code/ece540w20_proj3_r1_1/project_3/project_3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [d:/Projects/Code/ece540w20_proj3_r1_1/project_3/project_3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1216.082 ; gain = 570.590
+Finished Parsing XDC File [d:/Projects/Code/ece540w20_proj3_r1_1/project_3/project_3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'generated_clock/inst'
+Parsing XDC File [D:/Projects/Code/ece540w20_proj3_r1_1/project_3/project_3.srcs/constrs_1/imports/constraints/n4DDRfpga.xdc]
+Finished Parsing XDC File [D:/Projects/Code/ece540w20_proj3_r1_1/project_3/project_3.srcs/constrs_1/imports/constraints/n4DDRfpga.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+10 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1216.082 ; gain = 919.508
+Command: opt_design -directive ExploreSequentialArea
+INFO: [Vivado_Tcl 4-136] Directive used for opt_design is: ExploreSequentialArea
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.921 . Memory (MB): peak = 1216.082 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+Ending Cache Timing Information Task | Checksum: 17706fb68
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.236 . Memory (MB): peak = 1231.430 ; gain = 15.348
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 1789f76e0
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.204 . Memory (MB): peak = 1231.430 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 1789f76e0
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.243 . Memory (MB): peak = 1231.430 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: c2a534d4
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.288 . Memory (MB): peak = 1231.430 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 12 cells and removed 5 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: c2a534d4
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.333 . Memory (MB): peak = 1231.430 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 127dfabe1
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.454 . Memory (MB): peak = 1231.430 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 6 Constant propagation | Checksum: 127dfabe1
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.494 . Memory (MB): peak = 1231.430 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 7 Sweep
+Phase 7 Sweep | Checksum: 19e623774
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.519 . Memory (MB): peak = 1231.430 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 8 Resynthesis
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-74] Optimized 2 modules.
+INFO: [Opt 31-75] Optimized module 'binary_to_bcd'.
+INFO: [Opt 31-75] Optimized module 'control_unit'.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 8 Resynthesis | Checksum: de3ec425
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1231.430 ; gain = 0.000
+INFO: [Opt 31-389] Phase Resynthesis created 218 cells and removed 237 cells
+
+Phase 9 Post Processing Netlist
+Phase 9 Post Processing Netlist | Checksum: de3ec425
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1231.430 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1231.430 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 18318f105
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1231.430 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 18318f105
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1231.430 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 18318f105
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1231.430 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+38 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1231.430 ; gain = 15.348
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 1231.430 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Projects/Code/ece540w20_proj3_r1_1/project_3/project_3.runs/impl_220_v1/nexys4fpga_v1_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file nexys4fpga_v1_drc_opted.rpt -pb nexys4fpga_v1_drc_opted.pb -rpx nexys4fpga_v1_drc_opted.rpx
+Command: report_drc -file nexys4fpga_v1_drc_opted.rpt -pb nexys4fpga_v1_drc_opted.pb -rpx nexys4fpga_v1_drc_opted.rpx
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file D:/Projects/Code/ece540w20_proj3_r1_1/project_3/project_3.runs/impl_220_v1/nexys4fpga_v1_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design -directive EarlyBlockPlacement
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 46-5] The placer was invoked with the 'EarlyBlockPlacement' directive.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1231.430 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 1590c39c5
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1231.430 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1250.770 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 816b6c6b
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1252.340 ; gain = 20.910
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 103a345a6
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1252.340 ; gain = 20.910
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 103a345a6
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1252.340 ; gain = 20.910
+Phase 1 Placer Initialization | Checksum: 103a345a6
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1252.340 ; gain = 20.910
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 154ffd38d
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1252.340 ; gain = 20.910
+
+Phase 2.2 Physical Synthesis In Placer
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1252.340 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+|  Optimization       |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------
+|  Very High Fanout   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total              |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.2 Physical Synthesis In Placer | Checksum: 9ee24d2b
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:17 . Memory (MB): peak = 1252.340 ; gain = 20.910
+Phase 2 Global Placement | Checksum: 115ea6b6c
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:17 . Memory (MB): peak = 1252.340 ; gain = 20.910
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 115ea6b6c
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:17 . Memory (MB): peak = 1252.340 ; gain = 20.910
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 194071d0d
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 1252.340 ; gain = 20.910
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 19c0ae953
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 1252.340 ; gain = 20.910
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 1850f4e82
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 1252.340 ; gain = 20.910
+
+Phase 3.5 Timing Path Optimizer
+Phase 3.5 Timing Path Optimizer | Checksum: 1850f4e82
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:18 . Memory (MB): peak = 1252.340 ; gain = 20.910
+
+Phase 3.6 Fast Optimization
+Phase 3.6 Fast Optimization | Checksum: 1e3a7e800
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:25 . Memory (MB): peak = 1252.340 ; gain = 20.910
+
+Phase 3.7 Small Shape Detail Placement
+Phase 3.7 Small Shape Detail Placement | Checksum: 180896453
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:26 . Memory (MB): peak = 1252.340 ; gain = 20.910
+
+Phase 3.8 Re-assign LUT pins
+Phase 3.8 Re-assign LUT pins | Checksum: 171c99143
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:26 . Memory (MB): peak = 1252.340 ; gain = 20.910
+
+Phase 3.9 Pipeline Register Optimization
+Phase 3.9 Pipeline Register Optimization | Checksum: 171c99143
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:26 . Memory (MB): peak = 1252.340 ; gain = 20.910
+
+Phase 3.10 Fast Optimization
+Phase 3.10 Fast Optimization | Checksum: 15f1de385
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:31 . Memory (MB): peak = 1252.340 ; gain = 20.910
+Phase 3 Detail Placement | Checksum: 15f1de385
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:31 . Memory (MB): peak = 1252.340 ; gain = 20.910
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 15fd80379
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Place 46-31] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 15fd80379
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:32 . Memory (MB): peak = 1252.340 ; gain = 20.910
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.160. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 1a8239a72
+
+Time (s): cpu = 00:03:59 ; elapsed = 00:03:57 . Memory (MB): peak = 1252.340 ; gain = 20.910
+Phase 4.1 Post Commit Optimization | Checksum: 1a8239a72
+
+Time (s): cpu = 00:03:59 ; elapsed = 00:03:57 . Memory (MB): peak = 1252.340 ; gain = 20.910
+Post Placement Optimization Initialization | Checksum: 2021205ba
+INFO: [Place 46-31] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.087. For the most accurate timing information please run report_timing.
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 136e770ea
+
+Time (s): cpu = 00:05:40 ; elapsed = 00:05:42 . Memory (MB): peak = 1252.340 ; gain = 20.910
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 136e770ea
+
+Time (s): cpu = 00:05:40 ; elapsed = 00:05:42 . Memory (MB): peak = 1252.340 ; gain = 20.910
+
+Phase 4.4 Final Placement Cleanup
+Phase 4.4 Final Placement Cleanup | Checksum: 11911b247
+
+Time (s): cpu = 00:05:40 ; elapsed = 00:05:42 . Memory (MB): peak = 1252.340 ; gain = 20.910
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 11911b247
+
+Time (s): cpu = 00:05:40 ; elapsed = 00:05:42 . Memory (MB): peak = 1252.340 ; gain = 20.910
+Ending Placer Task | Checksum: f80a2cc8
+
+Time (s): cpu = 00:05:40 ; elapsed = 00:05:42 . Memory (MB): peak = 1252.340 ; gain = 20.910
+INFO: [Common 17-83] Releasing license: Implementation
+64 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:05:42 ; elapsed = 00:05:43 . Memory (MB): peak = 1252.340 ; gain = 20.910
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.219 . Memory (MB): peak = 1252.340 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Projects/Code/ece540w20_proj3_r1_1/project_3/project_3.runs/impl_220_v1/nexys4fpga_v1_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file nexys4fpga_v1_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.084 . Memory (MB): peak = 1252.340 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file nexys4fpga_v1_utilization_placed.rpt -pb nexys4fpga_v1_utilization_placed.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.077 . Memory (MB): peak = 1252.340 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file nexys4fpga_v1_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1252.340 ; gain = 0.000
+Command: phys_opt_design -directive AlternateFlowWithRetiming
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: AlternateFlowWithRetiming
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1252.340 ; gain = 0.000
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.087 | TNS=-0.700 |
+Phase 1 Physical Synthesis Initialization | Checksum: f9d07142
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1252.340 ; gain = 0.000
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.087 | TNS=-0.700 |
+
+Phase 2 Fanout Optimization
+INFO: [Physopt 32-76] Pass 1. Identified 4 candidate nets for fanout optimization.
+INFO: [Physopt 32-572] Net OUTMUX/BINBCD/binary_to_bcd_net_21 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net CTL/control_unit_net_7 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-572] Net OUTMUX/BINBCD/binary_to_bcd_net_54 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-81] Processed net DB/db_count[31]_i_1_n_0. Replicated 1 times.
+INFO: [Physopt 32-232] Optimized 1 net. Created 1 new instance.
+INFO: [Physopt 32-775] End 4 Pass. Optimized 1 net or cell. Created 1 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.087 | TNS=-0.700 |
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1252.340 ; gain = 0.000
+Phase 2 Fanout Optimization | Checksum: e3df65bd
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1252.340 ; gain = 0.000
+
+Phase 3 Placement Based Optimization
+INFO: [Physopt 32-660] Identified 300 candidate nets for placement-based optimization.
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/binary_to_bcd_net_21.  Did not re-place instance OUTMUX/BINBCD/binary_to_bcd_LUT5_2
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/binary_to_bcd_net_2.  Did not re-place instance OUTMUX/BINBCD/binary_to_bcd_LUT5_1
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/binary_to_bcd_net_1.  Did not re-place instance OUTMUX/BINBCD/binary_to_bcd_LUT6
+INFO: [Physopt 32-662] Processed net OUTMUX/cnvt_ff_reg_bret_bret_bret__23_n_0.  Did not re-place instance OUTMUX/cnvt_ff_reg_bret_bret_bret__23
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[0].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[0]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[12].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[12]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[14].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[14]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[15].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[15]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[20].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[20]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[21].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[21]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[22].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[22]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[26].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[26]
+INFO: [Physopt 32-662] Processed net OUTMUX/cnvt_ff_reg_bret_bret_bret__22_n_0.  Did not re-place instance OUTMUX/cnvt_ff_reg_bret_bret_bret__22
+INFO: [Physopt 32-663] Processed net OUTMUX/cnvt_ff_reg_bret_bret_bret__21_n_0.  Re-placed instance OUTMUX/cnvt_ff_reg_bret_bret_bret__21
+INFO: [Physopt 32-663] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[10].  Re-placed instance OUTMUX/BINBCD/bcd_reg_reg[10]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg[17].  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[17]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg[18].  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[18]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg[19].  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[19]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg[20].  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[20]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg[25].  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[25]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg[27].  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[27]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg[28].  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[28]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[11].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[11]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[13].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[13]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[16].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[16]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[17].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[17]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[1].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[1]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[23].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[23]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[24].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[24]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[25].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[25]
+INFO: [Physopt 32-662] Processed net CTL/control_unit_net_7.  Did not re-place instance CTL/control_unit_LUT6_4
+INFO: [Physopt 32-662] Processed net CTL/inputs_reg[1][0][0].  Did not re-place instance CTL/control_unit_LUT4_6
+INFO: [Physopt 32-662] Processed net CTL/sel[3].  Did not re-place instance CTL/state_reg[3]
+INFO: [Physopt 32-662] Processed net CTL/control_unit_net_2.  Did not re-place instance CTL/control_unit_LUT6_3
+INFO: [Physopt 32-662] Processed net CTL/control_unit_net_4.  Did not re-place instance CTL/control_unit_LUT2
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[1][0].  Re-placed instance inputs_reg[1][0]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[1][10].  Re-placed instance inputs_reg[1][10]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[1][11].  Re-placed instance inputs_reg[1][11]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[1][12].  Re-placed instance inputs_reg[1][12]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[1][1].  Re-placed instance inputs_reg[1][1]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[1][3].  Re-placed instance inputs_reg[1][3]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[1][4].  Re-placed instance inputs_reg[1][4]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[1][8].  Re-placed instance inputs_reg[1][8]
+INFO: [Physopt 32-662] Processed net CTL/control_unit_net_10.  Did not re-place instance CTL/control_unit_LUT2_1
+INFO: [Physopt 32-662] Processed net CTL/bin_reg_reg[8]_bret_bret__3.  Did not re-place instance CTL/control_unit_LUT6_66
+INFO: [Physopt 32-662] Processed net OUTMUX/cnvt_ff_reg_bret_bret_bret__20_n_0.  Did not re-place instance OUTMUX/cnvt_ff_reg_bret_bret_bret__20
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg_reg[8]_bret_bret__3_n_0.  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[8]_bret_bret__3
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[1][13].  Re-placed instance inputs_reg[1][13]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[1][14].  Re-placed instance inputs_reg[1][14]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[1][15].  Re-placed instance inputs_reg[1][15]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[1][2].  Re-placed instance inputs_reg[1][2]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[1][5].  Re-placed instance inputs_reg[1][5]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[1][6].  Re-placed instance inputs_reg[1][6]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[1][7].  Re-placed instance inputs_reg[1][7]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[1][9].  Re-placed instance inputs_reg[1][9]
+INFO: [Physopt 32-662] Processed net CTL/control_unit_net_11.  Did not re-place instance CTL/control_unit_LUT3
+INFO: [Physopt 32-662] Processed net CTL/bin_reg_reg[10]_bret_bret__3.  Did not re-place instance CTL/control_unit_LUT6_12
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg_reg[10]_bret_bret__3_n_0.  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[10]_bret_bret__3
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/binary_to_bcd_net_54.  Did not re-place instance OUTMUX/BINBCD/binary_to_bcd_LUT4_34
+INFO: [Physopt 32-663] Processed net OUTMUX/BINBCD/Q[12].  Re-placed instance OUTMUX/BINBCD/dat_bcd_o_reg[12]
+INFO: [Physopt 32-663] Processed net OUTMUX/BINBCD/Q[2].  Re-placed instance OUTMUX/BINBCD/dat_bcd_o_reg[2]
+INFO: [Physopt 32-663] Processed net OUTMUX/BINBCD/Q[6].  Re-placed instance OUTMUX/BINBCD/dat_bcd_o_reg[6]
+INFO: [Physopt 32-663] Processed net OUTMUX/BINBCD/Q[9].  Re-placed instance OUTMUX/BINBCD/dat_bcd_o_reg[9]
+INFO: [Physopt 32-663] Processed net OUTMUX/BINBCD/bcd_converter_out[20].  Re-placed instance OUTMUX/BINBCD/dat_bcd_o_reg[20]
+INFO: [Physopt 32-663] Processed net OUTMUX/BINBCD/bcd_converter_out[26].  Re-placed instance OUTMUX/BINBCD/dat_bcd_o_reg[26]
+INFO: [Physopt 32-663] Processed net OUTMUX/BINBCD/bcd_converter_out[27].  Re-placed instance OUTMUX/BINBCD/dat_bcd_o_reg[27]
+INFO: [Physopt 32-663] Processed net OUTMUX/BINBCD/bcd_converter_out[28].  Re-placed instance OUTMUX/BINBCD/dat_bcd_o_reg[28]
+INFO: [Physopt 32-663] Processed net OUTMUX/BINBCD/bcd_converter_out[29].  Re-placed instance OUTMUX/BINBCD/dat_bcd_o_reg[29]
+INFO: [Physopt 32-663] Processed net OUTMUX/BINBCD/bcd_converter_out[31].  Re-placed instance OUTMUX/BINBCD/dat_bcd_o_reg[31]
+INFO: [Physopt 32-662] Processed net CTL/D[0].  Did not re-place instance CTL/control_unit_LUT6_2
+INFO: [Physopt 32-662] Processed net CTL/sel[4].  Did not re-place instance CTL/state_reg[4]
+INFO: [Physopt 32-662] Processed net CTL/bin_reg_reg[13]_bret_bret__3.  Did not re-place instance CTL/control_unit_LUT6_24
+INFO: [Physopt 32-662] Processed net CTL/control_unit_net.  Did not re-place instance CTL/control_unit_LUT6
+INFO: [Physopt 32-662] Processed net CTL/control_unit_net_1.  Did not re-place instance CTL/control_unit_LUT6_1
+INFO: [Physopt 32-663] Processed net CTL/control_unit_net_16.  Re-placed instance CTL/control_unit_LUT6_23
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg_reg[13]_bret_bret__3_n_0.  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[13]_bret_bret__3
+INFO: [Physopt 32-663] Processed net OUTMUX/BINBCD/Q[11].  Re-placed instance OUTMUX/BINBCD/dat_bcd_o_reg[11]
+INFO: [Physopt 32-663] Processed net OUTMUX/BINBCD/Q[3].  Re-placed instance OUTMUX/BINBCD/dat_bcd_o_reg[3]
+INFO: [Physopt 32-663] Processed net OUTMUX/BINBCD/Q[4].  Re-placed instance OUTMUX/BINBCD/dat_bcd_o_reg[4]
+INFO: [Physopt 32-663] Processed net OUTMUX/BINBCD/Q[5].  Re-placed instance OUTMUX/BINBCD/dat_bcd_o_reg[5]
+INFO: [Physopt 32-663] Processed net OUTMUX/BINBCD/Q[7].  Re-placed instance OUTMUX/BINBCD/dat_bcd_o_reg[7]
+INFO: [Physopt 32-663] Processed net OUTMUX/BINBCD/bcd_converter_out[24].  Re-placed instance OUTMUX/BINBCD/dat_bcd_o_reg[24]
+INFO: [Physopt 32-663] Processed net OUTMUX/BINBCD/bcd_converter_out[30].  Re-placed instance OUTMUX/BINBCD/dat_bcd_o_reg[30]
+INFO: [Physopt 32-663] Processed net OUTMUX/BINBCD/busy_bit_reg_bret__2_n_0.  Re-placed instance OUTMUX/BINBCD/busy_bit_reg_bret__2
+INFO: [Physopt 32-662] Processed net CTL/inputs_reg[0][0][0].  Did not re-place instance CTL/control_unit_LUT4_4
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[0][13].  Re-placed instance inputs_reg[0][13]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[0][14].  Re-placed instance inputs_reg[0][14]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[0][15].  Re-placed instance inputs_reg[0][15]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[0][1].  Re-placed instance inputs_reg[0][1]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[0][4].  Did not re-place instance inputs_reg[0][4]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[0][5].  Did not re-place instance inputs_reg[0][5]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[0][6].  Did not re-place instance inputs_reg[0][6]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[0][7].  Did not re-place instance inputs_reg[0][7]
+INFO: [Physopt 32-662] Processed net u_mean/D[0].  Did not re-place instance u_mean/result_dly[0]_i_1
+INFO: [Physopt 32-662] Processed net u_mean/D[2].  Did not re-place instance u_mean/result_dly[2]_i_1
+INFO: [Physopt 32-663] Processed net result_reg[2]_bret_bret__2_n_0.  Re-placed instance result_reg[2]_bret_bret__2
+INFO: [Physopt 32-662] Processed net CTL/bin_reg_reg[2]_bret_bret__3.  Did not re-place instance CTL/control_unit_LUT6_42
+INFO: [Physopt 32-663] Processed net CTL/control_unit_net_22.  Re-placed instance CTL/control_unit_LUT6_41
+INFO: [Physopt 32-663] Processed net u_mean/result_dly[0]_i_2_n_0.  Re-placed instance u_mean/result_dly[0]_i_2
+INFO: [Physopt 32-662] Processed net u_mean/result_dly[2]_i_3_n_0.  Did not re-place instance u_mean/result_dly[2]_i_3
+INFO: [Physopt 32-663] Processed net OUTMUX/BINBCD/bin_reg_reg[0]_bret__0_n_0.  Re-placed instance OUTMUX/BINBCD/bin_reg_reg[0]_bret__0
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg_reg[2]_bret_bret__3_n_0.  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[2]_bret_bret__3
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[2].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[2]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[3].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[3]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[5].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[5]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[6].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[6]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[7].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[7]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[8].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[8]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[30].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[30]
+INFO: [Physopt 32-662] Processed net CTL/bin_reg_reg[5]_bret_bret__3.  Did not re-place instance CTL/control_unit_LUT6_54
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg_reg[5]_bret_bret__3_n_0.  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[5]_bret_bret__3
+INFO: [Physopt 32-662] Processed net CTL/bin_reg_reg[15]_bret_bret__3.  Did not re-place instance CTL/control_unit_LUT6_34
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg_reg[15]_bret_bret__3_n_0.  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[15]_bret_bret__3
+INFO: [Physopt 32-662] Processed net CTL/inputs_reg[3][0][0].  Did not re-place instance CTL/control_unit_LUT4_8
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[3][0].  Re-placed instance inputs_reg[3][0]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[3][10].  Re-placed instance inputs_reg[3][10]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[3][11].  Re-placed instance inputs_reg[3][11]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[3][12].  Re-placed instance inputs_reg[3][12]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[3][13].  Re-placed instance inputs_reg[3][13]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[3][15].  Re-placed instance inputs_reg[3][15]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[3][1].  Re-placed instance inputs_reg[3][1]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[3][6].  Re-placed instance inputs_reg[3][6]
+INFO: [Physopt 32-662] Processed net u_mean/D[3].  Did not re-place instance u_mean/result_dly[3]_i_1
+INFO: [Physopt 32-662] Processed net u_mean/D[1].  Did not re-place instance u_mean/result_dly[1]_i_1
+INFO: [Physopt 32-662] Processed net result_reg[0]_bret_bret_bret_bret__2_n_0.  Did not re-place instance result_reg[0]_bret_bret_bret_bret__2
+INFO: [Physopt 32-663] Processed net u_mean/result_dly[1]_i_2_n_0.  Re-placed instance u_mean/result_dly[1]_i_2
+INFO: [Physopt 32-662] Processed net CTL/bin_reg_reg[14]_bret_bret__3.  Did not re-place instance CTL/control_unit_LUT6_28
+INFO: [Physopt 32-663] Processed net CTL/control_unit_net_17.  Re-placed instance CTL/control_unit_LUT6_27
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg_reg[14]_bret_bret__3_n_0.  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[14]_bret_bret__3
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[18].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[18]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[19].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[19]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[27].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[27]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[9].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[9]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/p_1_in.  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[4]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[28].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[28]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[29].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[29]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[31].  Did not re-place instance OUTMUX/BINBCD/bcd_reg_reg[31]
+INFO: [Physopt 32-662] Processed net u_mean/result_reg[6].  Did not re-place instance u_mean/result[6]_i_1
+INFO: [Physopt 32-662] Processed net u_mean/result_reg[8].  Did not re-place instance u_mean/result[8]_i_1
+INFO: [Physopt 32-663] Processed net u_mean/result[6]_i_2_n_0.  Re-placed instance u_mean/result[6]_i_2
+INFO: [Physopt 32-662] Processed net u_mean/result_reg[2]_bret_bret__7.  Did not re-place instance u_mean/result[2]_bret_bret__7_i_1
+INFO: [Physopt 32-662] Processed net u_mean/result_reg[0]_bret_bret_bret_bret_bret_bret_bret__1_n_0.  Did not re-place instance u_mean/result_reg[0]_bret_bret_bret_bret_bret_bret_bret__1
+INFO: [Physopt 32-662] Processed net u_mean/result_reg[4].  Did not re-place instance u_mean/result[4]_i_1
+INFO: [Physopt 32-662] Processed net result[4].  Did not re-place instance result_reg[4]
+INFO: [Physopt 32-663] Processed net CTL/sel[2].  Re-placed instance CTL/state_reg[2]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/Q[0].  Did not re-place instance OUTMUX/BINBCD/dat_bcd_o_reg[0]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/Q[10].  Did not re-place instance OUTMUX/BINBCD/dat_bcd_o_reg[10]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/Q[14].  Did not re-place instance OUTMUX/BINBCD/dat_bcd_o_reg[14]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/Q[16].  Did not re-place instance OUTMUX/BINBCD/dat_bcd_o_reg[16]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/Q[17].  Did not re-place instance OUTMUX/BINBCD/dat_bcd_o_reg[17]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/Q[18].  Did not re-place instance OUTMUX/BINBCD/dat_bcd_o_reg[18]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/Q[19].  Did not re-place instance OUTMUX/BINBCD/dat_bcd_o_reg[19]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bcd_converter_out[21].  Did not re-place instance OUTMUX/BINBCD/dat_bcd_o_reg[21]
+INFO: [Physopt 32-662] Processed net CTL/bin_reg_reg[0]_bret__4.  Did not re-place instance CTL/control_unit_LUT6_8
+INFO: [Physopt 32-663] Processed net CTL/control_unit_net_12.  Re-placed instance CTL/control_unit_LUT6_7
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg_reg[0]_bret__4_n_0.  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[0]_bret__4
+INFO: [Physopt 32-663] Processed net OUTMUX/cnvt_ff_reg_bret_bret_bret__25_n_0.  Re-placed instance OUTMUX/cnvt_ff_reg_bret_bret_bret__25
+INFO: [Physopt 32-662] Processed net u_mean/cnvt_ff_reg_bret_bret_bret__23.  Did not re-place instance u_mean/cnvt_ff_bret_bret_bret__23_i_1
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[0][0].  Did not re-place instance inputs_reg[0][0]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[0][10].  Did not re-place instance inputs_reg[0][10]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[0][11].  Did not re-place instance inputs_reg[0][11]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[0][12].  Did not re-place instance inputs_reg[0][12]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[0][2].  Did not re-place instance inputs_reg[0][2]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[0][3].  Did not re-place instance inputs_reg[0][3]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[0][8].  Did not re-place instance inputs_reg[0][8]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[0][9].  Did not re-place instance inputs_reg[0][9]
+INFO: [Physopt 32-662] Processed net CTL/E[0].  Did not re-place instance CTL/control_unit_LUT4_3
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[7][10].  Did not re-place instance inputs_reg[7][10]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[7][13].  Did not re-place instance inputs_reg[7][13]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[7][14].  Did not re-place instance inputs_reg[7][14]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[7][2].  Did not re-place instance inputs_reg[7][2]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[7][5].  Did not re-place instance inputs_reg[7][5]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[7][6].  Did not re-place instance inputs_reg[7][6]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[7][7].  Did not re-place instance inputs_reg[7][7]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[7][9].  Did not re-place instance inputs_reg[7][9]
+INFO: [Physopt 32-662] Processed net result_reg[2]_bret_bret_n_0.  Did not re-place instance result_reg[2]_bret_bret
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/newbit.  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[31]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg[21].  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[21]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg[22].  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[22]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg[23].  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[23]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg[24].  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[24]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg[26].  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[26]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg[29].  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[29]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg[30].  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[30]
+INFO: [Physopt 32-662] Processed net CTL/sel[5].  Did not re-place instance CTL/state_reg[5]
+INFO: [Physopt 32-662] Processed net u_mean/result_reg[5].  Did not re-place instance u_mean/result[5]_i_1
+INFO: [Physopt 32-662] Processed net CTL/control_unit_net_3.  Did not re-place instance CTL/control_unit_LUT4
+INFO: [Physopt 32-662] Processed net CTL/control_unit_net_9.  Did not re-place instance CTL/control_unit_LUT5
+INFO: [Physopt 32-662] Processed net u_mean/result_reg[7].  Did not re-place instance u_mean/result[7]_i_1
+INFO: [Physopt 32-663] Processed net u_mean/result_reg[0]_bret_bret_bret_bret_bret_bret_bret__3_n_0.  Re-placed instance u_mean/result_reg[0]_bret_bret_bret_bret_bret_bret_bret__3
+INFO: [Physopt 32-663] Processed net CTL/sel[10].  Re-placed instance CTL/state_reg[10]
+INFO: [Physopt 32-663] Processed net CTL/bin_reg_reg[15]_bret_bret__0.  Re-placed instance CTL/control_unit_LUT1_4
+INFO: [Physopt 32-662] Processed net u_mean/result[5]_i_2_n_0.  Did not re-place instance u_mean/result[5]_i_2
+INFO: [Physopt 32-663] Processed net u_mean/result[7]_i_3_n_0.  Re-placed instance u_mean/result[7]_i_3
+INFO: [Physopt 32-662] Processed net u_mean/result_reg[0]_bret_bret_bret_bret__2.  Did not re-place instance u_mean/result[0]_bret_bret_bret_bret__2_i_1
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg_reg[0]_bret__2_n_0.  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[0]_bret__2
+INFO: [Physopt 32-662] Processed net result_reg[0]_bret_bret_bret_bret_n_0.  Did not re-place instance result_reg[0]_bret_bret_bret_bret
+INFO: [Physopt 32-662] Processed net u_mean/result_reg[0]_bret_bret_bret_bret.  Did not re-place instance u_mean/result[0]_bret_bret_bret_bret_i_1
+INFO: [Physopt 32-662] Processed net CTL/bin_reg_reg[15]_bret__0.  Did not re-place instance CTL/control_unit_LUT6_30
+INFO: [Physopt 32-663] Processed net CTL/control_unit_net_5.  Re-placed instance CTL/control_unit_LUT4_1
+INFO: [Physopt 32-662] Processed net CTL/control_unit_net_18.  Did not re-place instance CTL/control_unit_LUT3_1
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg[16]_i_2_n_0.  Did not re-place instance OUTMUX/BINBCD/binary_to_bcd_LUT6_2
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg[16].  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[16]
+INFO: [Physopt 32-662] Processed net u_mean/result_dly[2]_i_2_n_0.  Did not re-place instance u_mean/result_dly[2]_i_2
+INFO: [Physopt 32-662] Processed net u_mean/result_reg[0]_bret_bret_bret_bret__3.  Did not re-place instance u_mean/result[0]_bret_bret_bret_bret__3_i_1
+INFO: [Physopt 32-662] Processed net result_reg[0]_bret_bret_bret_bret__3_n_0.  Did not re-place instance result_reg[0]_bret_bret_bret_bret__3
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[3][14].  Re-placed instance inputs_reg[3][14]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[3][9].  Re-placed instance inputs_reg[3][9]
+INFO: [Physopt 32-662] Processed net CTL/inputs_reg[2][0][0].  Did not re-place instance CTL/control_unit_LUT4_7
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[2][13].  Re-placed instance inputs_reg[2][13]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[2][14].  Re-placed instance inputs_reg[2][14]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[2][15].  Re-placed instance inputs_reg[2][15]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[2][1].  Re-placed instance inputs_reg[2][1]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[2][2].  Re-placed instance inputs_reg[2][2]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[2][3].  Re-placed instance inputs_reg[2][3]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[2][7].  Re-placed instance inputs_reg[2][7]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[2][8].  Re-placed instance inputs_reg[2][8]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[3][2].  Re-placed instance inputs_reg[3][2]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[3][3].  Re-placed instance inputs_reg[3][3]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[3][4].  Re-placed instance inputs_reg[3][4]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[3][5].  Re-placed instance inputs_reg[3][5]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[3][7].  Re-placed instance inputs_reg[3][7]
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[3][8].  Re-placed instance inputs_reg[3][8]
+INFO: [Physopt 32-663] Processed net CTL/sel[12].  Re-placed instance CTL/state_reg[12]
+INFO: [Physopt 32-663] Processed net OUTMUX/cnvt_ff_reg_bret_bret_bret__23_0[0].  Re-placed instance OUTMUX/result_dly_reg[0]
+INFO: [Physopt 32-662] Processed net DB/db_count[31]_i_1_n_0_repN.  Did not re-place instance DB/db_count[31]_i_1_replica
+INFO: [Physopt 32-663] Processed net DB/db_count[31]_i_4_n_0.  Re-placed instance DB/db_count[31]_i_4
+INFO: [Physopt 32-662] Processed net DB/db_count_reg_n_0_[5].  Did not re-place instance DB/db_count_reg[5]
+INFO: [Physopt 32-662] Processed net CTL/bin_reg_reg[7]_bret_bret__3.  Did not re-place instance CTL/control_unit_LUT6_62
+INFO: [Physopt 32-663] Processed net DB/db_count[31]_i_8_n_0.  Re-placed instance DB/db_count[31]_i_8
+INFO: [Physopt 32-662] Processed net DB/db_count_reg_n_0_[10].  Did not re-place instance DB/db_count_reg[10]
+INFO: [Physopt 32-662] Processed net DB/db_count_reg_n_0_[12].  Did not re-place instance DB/db_count_reg[12]
+INFO: [Physopt 32-662] Processed net DB/db_count_reg_n_0_[13].  Did not re-place instance DB/db_count_reg[13]
+INFO: [Physopt 32-662] Processed net DB/db_count_reg_n_0_[21].  Did not re-place instance DB/db_count_reg[21]
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg_reg[7]_bret_bret__3_n_0.  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[7]_bret_bret__3
+INFO: [Physopt 32-662] Processed net CTL/inputs_reg[8][0][0].  Did not re-place instance CTL/control_unit_LUT4_11
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[8][10].  Did not re-place instance inputs_reg[8][10]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[8][11].  Did not re-place instance inputs_reg[8][11]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[8][13].  Did not re-place instance inputs_reg[8][13]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[8][1].  Did not re-place instance inputs_reg[8][1]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[8][2].  Did not re-place instance inputs_reg[8][2]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[8][3].  Did not re-place instance inputs_reg[8][3]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[8][5].  Did not re-place instance inputs_reg[8][5]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[8][7].  Did not re-place instance inputs_reg[8][7]
+INFO: [Physopt 32-662] Processed net result[5].  Did not re-place instance result_reg[5]
+INFO: [Physopt 32-662] Processed net u_mean/result[12]_i_1_n_0.  Did not re-place instance u_mean/result[12]_i_1
+INFO: [Physopt 32-662] Processed net u_mean/result[10]_i_1_n_0.  Did not re-place instance u_mean/result[10]_i_1
+INFO: [Physopt 32-662] Processed net u_mean/sums_reg[0][19]_fret__3_n_0.  Did not re-place instance u_mean/sums_reg[0][19]_fret__3
+INFO: [Physopt 32-662] Processed net u_mean/result[0]_bret_bret_bret_bret_bret_bret_bret__4_i_1_n_0.  Did not re-place instance u_mean/result[0]_bret_bret_bret_bret_bret_bret_bret__4_i_1
+INFO: [Physopt 32-662] Processed net u_mean/result[10]_i_2_n_0.  Did not re-place instance u_mean/result[10]_i_2
+INFO: [Physopt 32-663] Processed net u_mean/result[12]_i_3_n_0.  Re-placed instance u_mean/result[12]_i_3
+INFO: [Physopt 32-662] Processed net u_mean/result[4]_i_2_n_0.  Did not re-place instance u_mean/result[4]_i_2
+INFO: [Physopt 32-662] Processed net u_mean/result_reg[0]_bret_bret_bret_bret_bret_bret_bret__4_n_0.  Did not re-place instance u_mean/result_reg[0]_bret_bret_bret_bret_bret_bret_bret__4
+INFO: [Physopt 32-663] Processed net CTL/control_unit_net_25.  Re-placed instance CTL/control_unit_LUT6_53
+INFO: [Physopt 32-662] Processed net CTL/inputs_reg[6][0][0].  Did not re-place instance CTL/control_unit_LUT4_10
+INFO: [Physopt 32-662] Processed net CTL/control_unit_net_20.  Did not re-place instance CTL/control_unit_LUT6_33
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[6][8].  Did not re-place instance inputs_reg[6][8]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[6][9].  Did not re-place instance inputs_reg[6][9]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[7][0].  Did not re-place instance inputs_reg[7][0]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[7][11].  Did not re-place instance inputs_reg[7][11]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[7][12].  Did not re-place instance inputs_reg[7][12]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[7][15].  Did not re-place instance inputs_reg[7][15]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[7][1].  Did not re-place instance inputs_reg[7][1]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[7][3].  Did not re-place instance inputs_reg[7][3]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[7][4].  Did not re-place instance inputs_reg[7][4]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[7][8].  Did not re-place instance inputs_reg[7][8]
+INFO: [Physopt 32-662] Processed net u_mean/result[11]_i_1_n_0.  Did not re-place instance u_mean/result[11]_i_1
+INFO: [Physopt 32-663] Processed net u_mean/sums_reg[0]_12[13].  Re-placed instance u_mean/sums_reg[0][13]
+INFO: [Physopt 32-663] Processed net u_mean/result[13]_i_1_n_0.  Re-placed instance u_mean/result[13]_i_1
+INFO: [Physopt 32-662] Processed net DB/db_count_reg_n_0_[4].  Did not re-place instance DB/db_count_reg[4]
+INFO: [Physopt 32-662] Processed net u_mean/result[11]_i_3_n_0.  Did not re-place instance u_mean/result[11]_i_3
+INFO: [Physopt 32-662] Processed net CTL/inputs_reg[9][0][0].  Did not re-place instance CTL/control_unit_LUT4_12
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[9][10].  Did not re-place instance inputs_reg[9][10]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[9][13].  Did not re-place instance inputs_reg[9][13]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[9][14].  Did not re-place instance inputs_reg[9][14]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[9][15].  Did not re-place instance inputs_reg[9][15]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[9][1].  Did not re-place instance inputs_reg[9][1]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[9][2].  Did not re-place instance inputs_reg[9][2]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[9][3].  Did not re-place instance inputs_reg[9][3]
+INFO: [Physopt 32-662] Processed net inputs_reg_n_0_[9][6].  Did not re-place instance inputs_reg[9][6]
+INFO: [Physopt 32-662] Processed net u_mean/result[10]_i_3_n_0.  Did not re-place instance u_mean/result[10]_i_3
+INFO: [Physopt 32-662] Processed net result_reg[0]_bret_bret_bret_bret__1_n_0.  Did not re-place instance result_reg[0]_bret_bret_bret_bret__1
+INFO: [Physopt 32-663] Processed net u_mean/result[0]_bret_bret_bret_bret__3_i_2_n_0.  Re-placed instance u_mean/result[0]_bret_bret_bret_bret__3_i_2
+INFO: [Physopt 32-662] Processed net CTL/sel[11].  Did not re-place instance CTL/state_reg[11]
+INFO: [Physopt 32-662] Processed net OUTMUX/cnvt_ff_reg_bret_bret_bret__24_n_0.  Did not re-place instance OUTMUX/cnvt_ff_reg_bret_bret_bret__24
+INFO: [Physopt 32-662] Processed net u_mean/sums_reg[0][19]_fret__0_n_0.  Did not re-place instance u_mean/sums_reg[0][19]_fret__0
+INFO: [Physopt 32-663] Processed net u_mean/sums_reg[1]_11[1].  Re-placed instance u_mean/sums_reg[1][1]
+INFO: [Physopt 32-662] Processed net CTL/bin_reg_reg[12]_bret_bret__3.  Did not re-place instance CTL/control_unit_LUT6_20
+INFO: [Physopt 32-662] Processed net CTL/bin_reg_reg[4]_bret_bret__3.  Did not re-place instance CTL/control_unit_LUT6_50
+INFO: [Physopt 32-663] Processed net CTL/control_unit_net_15.  Re-placed instance CTL/control_unit_LUT6_19
+INFO: [Physopt 32-663] Processed net u_mean/result_dly[0]_i_3_n_0.  Re-placed instance u_mean/result_dly[0]_i_3
+INFO: [Physopt 32-663] Processed net u_mean/sums[0][19]_fret__0_i_1_n_0.  Re-placed instance u_mean/sums[0][19]_fret__0_i_1
+INFO: [Physopt 32-662] Processed net u_mean/sums[0][3]_i_4_n_0.  Did not re-place instance u_mean/sums[0][3]_i_4
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg_reg[12]_bret_bret__3_n_0.  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[12]_bret_bret__3
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg_reg[4]_bret_bret__3_n_0.  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[4]_bret_bret__3
+INFO: [Physopt 32-662] Processed net u_mean/result[0]_bret_bret_bret_bret_bret_bret_bret__0_i_2_n_0.  Did not re-place instance u_mean/result[0]_bret_bret_bret_bret_bret_bret_bret__0_i_2
+INFO: [Physopt 32-662] Processed net CTL/bin_reg_reg[1]_bret_bret__3.  Did not re-place instance CTL/control_unit_LUT6_38
+INFO: [Physopt 32-663] Processed net CTL/control_unit_net_21.  Re-placed instance CTL/control_unit_LUT6_37
+INFO: [Physopt 32-662] Processed net OUTMUX/BINBCD/bin_reg_reg[1]_bret_bret__3_n_0.  Did not re-place instance OUTMUX/BINBCD/bin_reg_reg[1]_bret_bret__3
+INFO: [Physopt 32-662] Processed net u_mean/result[6]_i_3_n_0.  Did not re-place instance u_mean/result[6]_i_3
+INFO: [Physopt 32-661] Optimized 94 nets.  Re-placed 94 instances.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 94 nets or cells. Created 0 new cell, deleted 0 existing cell and moved 94 existing cells
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.087 | TNS=-0.693 |
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1252.340 ; gain = 0.000
+Phase 3 Placement Based Optimization | Checksum: 13ce96149
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1252.340 ; gain = 0.000
+
+Phase 4 Rewire
+INFO: [Physopt 32-246] Starting Signal Push optimization...
+INFO: [Physopt 32-77] Pass 1. Identified 2 candidate nets for rewire optimization.
+INFO: [Physopt 32-134] Processed net OUTMUX/BINBCD/binary_to_bcd_net_1. Rewiring did not optimize the net.
+INFO: [Physopt 32-134] Processed net OUTMUX/BINBCD/binary_to_bcd_net_2. Rewiring did not optimize the net.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 4 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1252.340 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1252.340 ; gain = 0.000
+Phase 4 Rewire | Checksum: 19e69ceec
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1252.340 ; gain = 0.000
+
+Phase 5 Critical Cell Optimization
+INFO: [Physopt 32-46] Identified 6 candidate nets for critical-cell optimization.
+INFO: [Physopt 32-572] Net OUTMUX/BINBCD/binary_to_bcd_net_2 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-571] Net CTL/control_unit_net_10 was not replicated.
+INFO: [Physopt 32-571] Net CTL/sel[3] was not replicated.
+INFO: [Physopt 32-571] Net CTL/control_unit_net_11 was not replicated.
+INFO: [Physopt 32-571] Net CTL/inputs_reg[0][0][0] was not replicated.
+INFO: [Physopt 32-571] Net CTL/E[0] was not replicated.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1252.340 ; gain = 0.000
+Phase 5 Critical Cell Optimization | Checksum: fcce2e37
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1252.340 ; gain = 0.000
+
+Phase 6 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 6 DSP Register Optimization | Checksum: fcce2e37
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1252.340 ; gain = 0.000
+
+Phase 7 BRAM Register Optimization
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 7 BRAM Register Optimization | Checksum: fcce2e37
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1252.340 ; gain = 0.000
+
+Phase 8 URAM Register Optimization
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 8 URAM Register Optimization | Checksum: fcce2e37
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1252.340 ; gain = 0.000
+
+Phase 9 Shift Register Optimization
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 9 Shift Register Optimization | Checksum: fcce2e37
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1252.340 ; gain = 0.000
+
+Phase 10 Retime Optimization
+INFO: [Physopt 32-528] Pass 1. Identified 1 candidate net for forward retime optimization.
+INFO: [Physopt 32-206] Processed net CTL/control_unit_net_2. Retiming did not optimize the net.
+INFO: [Physopt 32-200] End Pass 1. Optimized 0 net. Created 0 new instance, removed 0 instance. 
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1252.340 ; gain = 0.000
+Phase 10 Retime Optimization | Checksum: fe4d2b3d
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:08 . Memory (MB): peak = 1252.340 ; gain = 0.000
+
+Phase 11 Critical Pin Optimization
+INFO: [Physopt 32-606] Identified 8 candidate nets for critical-pin optimization.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 8 pins.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 1 net or cell. Created 0 new cell, deleted 0 existing cell and moved 8 existing cells
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.087 | TNS=-0.693 |
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1252.340 ; gain = 0.000
+Phase 11 Critical Pin Optimization | Checksum: fe4d2b3d
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 1252.340 ; gain = 0.000
+
+Phase 12 Very High Fanout Optimization
+INFO: [Physopt 32-76] Pass 1. Identified 1 candidate net for fanout optimization.
+INFO: [Physopt 32-572] Net DB/JA_OBUF[1] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1252.340 ; gain = 0.000
+Phase 12 Very High Fanout Optimization | Checksum: 19e8a0dd9
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1252.340 ; gain = 0.000
+
+Phase 13 BRAM Enable Optimization
+Phase 13 BRAM Enable Optimization | Checksum: 19e8a0dd9
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 1252.340 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1252.340 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-0.087 | TNS=-0.693 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization       |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Fanout             |          0.000  |          0.000  |            1  |              0  |                     1  |           0  |           1  |  00:00:00  |
+|  Placement Based    |          0.000  |          0.007  |            0  |              0  |                    94  |           0  |           1  |  00:00:06  |
+|  Rewire             |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Cell      |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register       |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register      |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register      |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register     |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Retime             |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Pin       |          0.000  |          0.000  |            0  |              0  |                     1  |           0  |           1  |  00:00:00  |
+|  Very High Fanout   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:01  |
+|  BRAM Enable        |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total              |          0.000  |          0.007  |            1  |              0  |                    96  |           0  |          12  |  00:00:08  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Physical Synthesis Task | Checksum: d2e0f7e5
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 1252.340 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+422 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 1252.340 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.204 . Memory (MB): peak = 1252.340 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Projects/Code/ece540w20_proj3_r1_1/project_3/project_3.runs/impl_220_v1/nexys4fpga_v1_physopt.dcp' has been generated.
+Command: route_design -directive AlternateCLBRouting
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-270] Using Router directive 'AlternateCLBRouting'.
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: 23874691 ConstDB: 0 ShapeSum: 1a10071f RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 1654c8223
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:29 . Memory (MB): peak = 1379.000 ; gain = 126.660
+Post Restoration Checksum: NetGraph: dbbe005a NumContArr: 898e81c9 Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 1654c8223
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:29 . Memory (MB): peak = 1379.000 ; gain = 126.660
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 1654c8223
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:29 . Memory (MB): peak = 1385.227 ; gain = 132.887
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 1654c8223
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:29 . Memory (MB): peak = 1385.227 ; gain = 132.887
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 2455e2a79
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:30 . Memory (MB): peak = 1401.262 ; gain = 148.922
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.025  | TNS=0.000  | WHS=-0.200 | THS=-33.465|
+
+Phase 2 Router Initialization | Checksum: 26879f698
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:30 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 12515a4c8
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:31 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 305
+ Number of Nodes with overlaps = 140
+ Number of Nodes with overlaps = 73
+ Number of Nodes with overlaps = 52
+ Number of Nodes with overlaps = 32
+ Number of Nodes with overlaps = 14
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.331 | TNS=-18.784| WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 20a6d0be4
+
+Time (s): cpu = 00:00:42 ; elapsed = 00:00:35 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 50
+ Number of Nodes with overlaps = 25
+ Number of Nodes with overlaps = 15
+ Number of Nodes with overlaps = 12
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.331 | TNS=-15.442| WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 1249db08a
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:37 . Memory (MB): peak = 1401.262 ; gain = 148.922
+Phase 4 Rip-up And Reroute | Checksum: 1249db08a
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:37 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 1454894c2
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:37 . Memory (MB): peak = 1401.262 ; gain = 148.922
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.307 | TNS=-12.156| WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 24ee484dd
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:37 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 24ee484dd
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:37 . Memory (MB): peak = 1401.262 ; gain = 148.922
+Phase 5 Delay and Skew Optimization | Checksum: 24ee484dd
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:37 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 18f277f19
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:37 . Memory (MB): peak = 1401.262 ; gain = 148.922
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.295 | TNS=-11.250| WHS=0.039  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 1c5a6631b
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:37 . Memory (MB): peak = 1401.262 ; gain = 148.922
+Phase 6 Post Hold Fix | Checksum: 1c5a6631b
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:37 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Phase 7 Timing Verification
+
+Phase 7.1 Update Timing
+Phase 7.1 Update Timing | Checksum: 19285b43f
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:38 . Memory (MB): peak = 1401.262 ; gain = 148.922
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.295 | TNS=-11.250| WHS=N/A    | THS=N/A    |
+
+Phase 7 Timing Verification | Checksum: 19285b43f
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:38 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Phase 8 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.552204 %
+  Global Horizontal Routing Utilization  = 0.47137 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 61.2613%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 68.4685%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 73.5294%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 60.2941%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 8 Route finalize | Checksum: 19285b43f
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:38 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Phase 9 Verifying routed nets
+
+ Verification completed successfully
+Phase 9 Verifying routed nets | Checksum: 19285b43f
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:38 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: bab4e7e0
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:38 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Phase 11 Incr Placement Change
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1401.262 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-0.237. For the most accurate timing information please run report_timing.
+Ending IncrPlace Task | Checksum: 133214254
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1401.262 ; gain = 0.000
+Google Cpuprofiler is only supported on Linux.
+Phase 11 Incr Placement Change | Checksum: bab4e7e0
+
+Time (s): cpu = 00:01:12 ; elapsed = 00:01:04 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Phase 12 Build RT Design
+Phase 12 Build RT Design | Checksum: ce1ae416
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:01:08 . Memory (MB): peak = 1401.262 ; gain = 148.922
+Post Restoration Checksum: NetGraph: 253cc35a NumContArr: 40e50d37 Constraints: 0 Timing: 0
+
+Phase 13 Router Initialization
+
+Phase 13.1 Create Timer
+Phase 13.1 Create Timer | Checksum: 6621d091
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:01:08 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Phase 13.2 Fix Topology Constraints
+Phase 13.2 Fix Topology Constraints | Checksum: 6621d091
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:01:08 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Phase 13.3 Pre Route Cleanup
+Phase 13.3 Pre Route Cleanup | Checksum: 13b01c897
+
+Time (s): cpu = 00:01:16 ; elapsed = 00:01:08 . Memory (MB): peak = 1401.262 ; gain = 148.922
+ Number of Nodes with overlaps = 0
+
+Phase 13.4 Update Timing
+Phase 13.4 Update Timing | Checksum: 145db9ecf
+
+Time (s): cpu = 00:01:17 ; elapsed = 00:01:09 . Memory (MB): peak = 1401.262 ; gain = 148.922
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.321 | TNS=-10.027| WHS=-0.200 | THS=-33.512|
+
+Phase 13 Router Initialization | Checksum: fa582408
+
+Time (s): cpu = 00:01:18 ; elapsed = 00:01:09 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Phase 14 Initial Routing
+Phase 14 Initial Routing | Checksum: 16f172146
+
+Time (s): cpu = 00:01:18 ; elapsed = 00:01:09 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Phase 15 Rip-up And Reroute
+
+Phase 15.1 Global Iteration 0
+ Number of Nodes with overlaps = 101
+ Number of Nodes with overlaps = 63
+ Number of Nodes with overlaps = 40
+ Number of Nodes with overlaps = 16
+ Number of Nodes with overlaps = 14
+ Number of Nodes with overlaps = 10
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.366 | TNS=-19.668| WHS=N/A    | THS=N/A    |
+
+Phase 15.1 Global Iteration 0 | Checksum: 13b930283
+
+Time (s): cpu = 00:01:21 ; elapsed = 00:01:12 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Phase 15.2 Global Iteration 1
+ Number of Nodes with overlaps = 38
+ Number of Nodes with overlaps = 26
+ Number of Nodes with overlaps = 24
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.378 | TNS=-20.588| WHS=N/A    | THS=N/A    |
+
+Phase 15.2 Global Iteration 1 | Checksum: 25c7d6f39
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:13 . Memory (MB): peak = 1401.262 ; gain = 148.922
+Phase 15 Rip-up And Reroute | Checksum: 25c7d6f39
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:13 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Phase 16 Delay and Skew Optimization
+
+Phase 16.1 Delay CleanUp
+
+Phase 16.1.1 Update Timing
+Phase 16.1.1 Update Timing | Checksum: 1e8e96afe
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:14 . Memory (MB): peak = 1401.262 ; gain = 148.922
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.269 | TNS=-11.216| WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 16.1 Delay CleanUp | Checksum: d225bbbd
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:14 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Phase 16.2 Clock Skew Optimization
+Phase 16.2 Clock Skew Optimization | Checksum: d225bbbd
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:14 . Memory (MB): peak = 1401.262 ; gain = 148.922
+Phase 16 Delay and Skew Optimization | Checksum: d225bbbd
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:14 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Phase 17 Post Hold Fix
+
+Phase 17.1 Hold Fix Iter
+
+Phase 17.1.1 Update Timing
+Phase 17.1.1 Update Timing | Checksum: 9ef28ccd
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:14 . Memory (MB): peak = 1401.262 ; gain = 148.922
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.255 | TNS=-11.374| WHS=0.039  | THS=0.000  |
+
+Phase 17.1 Hold Fix Iter | Checksum: 124b4136a
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:14 . Memory (MB): peak = 1401.262 ; gain = 148.922
+Phase 17 Post Hold Fix | Checksum: 124b4136a
+
+Time (s): cpu = 00:01:24 ; elapsed = 00:01:14 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Phase 18 Timing Verification
+
+Phase 18.1 Update Timing
+Phase 18.1 Update Timing | Checksum: ee5ea0e1
+
+Time (s): cpu = 00:01:25 ; elapsed = 00:01:14 . Memory (MB): peak = 1401.262 ; gain = 148.922
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.255 | TNS=-11.374| WHS=N/A    | THS=N/A    |
+
+Phase 18 Timing Verification | Checksum: ee5ea0e1
+
+Time (s): cpu = 00:01:25 ; elapsed = 00:01:14 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Phase 19 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.557862 %
+  Global Horizontal Routing Utilization  = 0.479255 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 58.5586%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 67.5676%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 70.5882%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 52.9412%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 19 Route finalize | Checksum: ee5ea0e1
+
+Time (s): cpu = 00:01:25 ; elapsed = 00:01:14 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Phase 20 Verifying routed nets
+
+ Verification completed successfully
+Phase 20 Verifying routed nets | Checksum: ee5ea0e1
+
+Time (s): cpu = 00:01:25 ; elapsed = 00:01:14 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Phase 21 Depositing Routes
+Phase 21 Depositing Routes | Checksum: 1d815b795
+
+Time (s): cpu = 00:01:25 ; elapsed = 00:01:14 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Phase 22 Post Router Timing
+INFO: [Route 35-20] Post Routing Timing Summary | WNS=-0.251 | TNS=-11.049| WHS=0.057  | THS=0.000  |
+
+WARNING: [Route 35-39] The design did not meet timing requirements. Please run report_timing_summary for detailed reports.
+Resolution: Verify that the timing was met or had small violations at all previous steps (synthesis, placement, power_opt, and phys_opt). Run report_timing_summary and analyze individual timing paths.
+INFO: [Route 35-253] TNS is the sum of the worst slack violation on every endpoint in the design. Review the paths with the biggest WNS violations in the timing reports and modify your constraints or your design to improve both WNS and TNS.
+Phase 22 Post Router Timing | Checksum: 1c78402e3
+
+Time (s): cpu = 00:01:26 ; elapsed = 00:01:15 . Memory (MB): peak = 1401.262 ; gain = 148.922
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:01:26 ; elapsed = 00:01:15 . Memory (MB): peak = 1401.262 ; gain = 148.922
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+450 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:01:28 ; elapsed = 00:01:16 . Memory (MB): peak = 1401.262 ; gain = 148.922
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.265 . Memory (MB): peak = 1401.262 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Projects/Code/ece540w20_proj3_r1_1/project_3/project_3.runs/impl_220_v1/nexys4fpga_v1_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file nexys4fpga_v1_drc_routed.rpt -pb nexys4fpga_v1_drc_routed.pb -rpx nexys4fpga_v1_drc_routed.rpx
+Command: report_drc -file nexys4fpga_v1_drc_routed.rpt -pb nexys4fpga_v1_drc_routed.pb -rpx nexys4fpga_v1_drc_routed.rpx
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file D:/Projects/Code/ece540w20_proj3_r1_1/project_3/project_3.runs/impl_220_v1/nexys4fpga_v1_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file nexys4fpga_v1_methodology_drc_routed.rpt -pb nexys4fpga_v1_methodology_drc_routed.pb -rpx nexys4fpga_v1_methodology_drc_routed.rpx
+Command: report_methodology -file nexys4fpga_v1_methodology_drc_routed.rpt -pb nexys4fpga_v1_methodology_drc_routed.pb -rpx nexys4fpga_v1_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file D:/Projects/Code/ece540w20_proj3_r1_1/project_3/project_3.runs/impl_220_v1/nexys4fpga_v1_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file nexys4fpga_v1_power_routed.rpt -pb nexys4fpga_v1_power_summary_routed.pb -rpx nexys4fpga_v1_power_routed.rpx
+Command: report_power -file nexys4fpga_v1_power_routed.rpt -pb nexys4fpga_v1_power_summary_routed.pb -rpx nexys4fpga_v1_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+WARNING: [Power 33-332] Found switching activity that implies high-fanout reset nets being asserted for excessive periods of time which may result in inaccurate power analysis.
+Resolution: To review and fix problems, please run Power Constraints Advisor in the GUI from Tools > Power Constraints Advisor or run report_power with the -advisory option to generate a text report.
+462 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file nexys4fpga_v1_route_status.rpt -pb nexys4fpga_v1_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file nexys4fpga_v1_timing_summary_routed.rpt -pb nexys4fpga_v1_timing_summary_routed.pb -rpx nexys4fpga_v1_timing_summary_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max, Timing Stage: Requireds.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [runtcl-4] Executing : report_incremental_reuse -file nexys4fpga_v1_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-545] No incremental reuse to report, no incremental placement and routing data was found.
+INFO: [runtcl-4] Executing : report_clock_utilization -file nexys4fpga_v1_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file nexys4fpga_v1_bus_skew_routed.rpt -pb nexys4fpga_v1_bus_skew_routed.pb -rpx nexys4fpga_v1_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max, Timing Stage: Requireds.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+Command: phys_opt_design -directive ExploreWithAggressiveHoldFix
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t'
+INFO: [Vivado_Tcl 4-241] Physical synthesis in post route mode ( 100.0% nets are fully routed)
+INFO: [Vivado_Tcl 4-137] Directive used for phys_opt_design is: ExploreWithAggressiveHoldFix
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1401.262 ; gain = 0.000
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.251 | TNS=-11.049 | WHS=0.057 | THS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1a3a26f9c
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1401.262 ; gain = 0.000
+
+Phase 2 Critical Path Optimization
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.251 | TNS=-11.049 | WHS=0.057 | THS=0.000 |
+INFO: [Physopt 32-663] Processed net result[5].  Re-placed instance result_reg[5]
+INFO: [Physopt 32-735] Processed net result[5]. Optimization improves timing on the net.
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.215 | TNS=-10.760 | WHS=0.057 | THS=0.000 |
+INFO: [Physopt 32-702] Processed net OUTMUX/BINBCD/bcd_reg_reg_n_0_[10]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net OUTMUX/cnvt_ff_reg_bret_bret_bret__23_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net OUTMUX/BINBCD/binary_to_bcd_net_21. Critial path length was reduced through logic transformation on cell OUTMUX/BINBCD/binary_to_bcd_LUT5_2_comp.
+INFO: [Physopt 32-735] Processed net OUTMUX/BINBCD/binary_to_bcd_net_2. Optimization improves timing on the net.
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.186 | TNS=-6.706 | WHS=0.057 | THS=0.000 |
+INFO: [Physopt 32-663] Processed net inputs_reg_n_0_[0][4].  Re-placed instance inputs_reg[0][4]
+INFO: [Physopt 32-735] Processed net inputs_reg_n_0_[0][4]. Optimization improves timing on the net.
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.186 | TNS=-6.528 | WHS=0.057 | THS=0.000 |
+INFO: [Physopt 32-702] Processed net inputs_reg_n_0_[0][5]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-703] Processed net CTL/sel[7]. Clock skew was adjusted for instance CTL/state_reg[7].
+INFO: [Physopt 32-735] Processed net CTL/sel[7]. Optimization improves timing on the net.
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.117 | TNS=-3.021 | WHS=0.000 | THS=0.000 |
+INFO: [Physopt 32-703] Processed net OUTMUX/BINBCD/busy_bit_reg_bret_n_0. Clock skew was adjusted for instance OUTMUX/BINBCD/busy_bit_reg_bret.
+INFO: [Physopt 32-735] Processed net OUTMUX/BINBCD/busy_bit_reg_bret_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.107 | TNS=-2.941 | WHS=0.000 | THS=0.000 |
+INFO: [Physopt 32-735] Processed net OUTMUX/BINBCD/binary_to_bcd_net_1. Optimization improves timing on the net.
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.095 | TNS=-1.248 | WHS=0.000 | THS=0.000 |
+INFO: [Physopt 32-702] Processed net result_reg[0]_bret_bret_bret_bret__2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net u_mean/result_reg[0]_bret_bret_bret_bret_bret_bret_bret__3_n_0.  Re-placed instance u_mean/result_reg[0]_bret_bret_bret_bret_bret_bret_bret__3
+INFO: [Physopt 32-735] Processed net u_mean/result_reg[0]_bret_bret_bret_bret_bret_bret_bret__3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.074 | TNS=-1.185 | WHS=0.000 | THS=0.000 |
+INFO: [Physopt 32-702] Processed net u_mean/result_reg[0]_bret_bret_bret_bret_bret_bret_bret__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_mean/result_reg[0]_bret_bret_bret_bret__2. Critial path length was reduced through logic transformation on cell u_mean/result[0]_bret_bret_bret_bret__2_i_1_comp.
+INFO: [Physopt 32-735] Processed net u_mean/result_reg[5]. Optimization improves timing on the net.
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.063 | TNS=-1.102 | WHS=0.000 | THS=0.000 |
+INFO: [Physopt 32-702] Processed net result_reg[0]_bret_bret_bret_bret_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_mean/result_reg[0]_bret_bret_bret_bret. Critial path length was reduced through logic transformation on cell u_mean/result[0]_bret_bret_bret_bret_i_1_comp.
+INFO: [Physopt 32-735] Processed net u_mean/result_reg[5]. Optimization improves timing on the net.
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.061 | TNS=-1.041 | WHS=0.000 | THS=0.000 |
+INFO: [Physopt 32-702] Processed net result_reg[0]_bret_bret_bret_bret__3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net u_mean/result_reg[0]_bret_bret_bret_bret__3. Critial path length was reduced through logic transformation on cell u_mean/result[0]_bret_bret_bret_bret__3_i_1_comp.
+INFO: [Physopt 32-735] Processed net u_mean/result_reg[5]. Optimization improves timing on the net.
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.051 | TNS=-0.979 | WHS=0.000 | THS=0.000 |
+INFO: [Physopt 32-702] Processed net OUTMUX/start_conversion_d. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net OUTMUX/BINBCD/binary_to_bcd_net_2_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.051 | TNS=-0.849 | WHS=0.000 | THS=0.000 |
+INFO: [Physopt 32-663] Processed net OUTMUX/BINBCD/bin_reg_reg[11]_bret_bret__1_n_0.  Re-placed instance OUTMUX/BINBCD/bin_reg_reg[11]_bret_bret__1
+INFO: [Physopt 32-735] Processed net OUTMUX/BINBCD/bin_reg_reg[11]_bret_bret__1_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.051 | TNS=-0.798 | WHS=0.000 | THS=0.000 |
+INFO: [Physopt 32-702] Processed net OUTMUX/BINBCD/bin_reg_reg[14]_bret_bret__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net OUTMUX/BINBCD/binary_to_bcd_net_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net OUTMUX/BINBCD/binary_to_bcd_net_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net OUTMUX/cnvt_ff15_inferred__0/i__carry__0_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net OUTMUX/BINBCD/binary_to_bcd_net_53. Optimization improves timing on the net.
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.036 | TNS=-0.629 | WHS=0.000 | THS=0.000 |
+INFO: [Physopt 32-702] Processed net OUTMUX/BINBCD/binary_to_bcd_net_53. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net generated_clock/inst/clk_220_clk_wiz_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net OUTMUX/BINBCD/binary_to_bcd_net_2_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net OUTMUX/BINBCD/binary_to_bcd_net_2_repN. Critial path length was reduced through logic transformation on cell OUTMUX/BINBCD/binary_to_bcd_LUT5_1_comp_1.
+INFO: [Physopt 32-735] Processed net OUTMUX/BINBCD/binary_to_bcd_net_3. Optimization improves timing on the net.
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.036 | TNS=-0.352 | WHS=0.000 | THS=0.000 |
+INFO: [Physopt 32-702] Processed net OUTMUX/BINBCD/bin_reg[17]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net OUTMUX/BINBCD/bin_reg_reg[14]_bret_bret__1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net OUTMUX/cnvt_ff_reg_bret_bret_bret__23_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net OUTMUX/BINBCD/binary_to_bcd_net_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net OUTMUX/BINBCD/binary_to_bcd_net_1. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net OUTMUX/cnvt_ff15_inferred__0/i__carry__0_n_2. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net OUTMUX/BINBCD/binary_to_bcd_net_53. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net generated_clock/inst/clk_220_clk_wiz_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net OUTMUX/BINBCD/bin_reg[17]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.036 | TNS=-0.352 | WHS=0.000 | THS=0.000 |
+Phase 2 Critical Path Optimization | Checksum: 1a3a26f9c
+
+Time (s): cpu = 00:01:29 ; elapsed = 00:01:09 . Memory (MB): peak = 1501.664 ; gain = 100.402
+
+Phase 3 Hold Fix Optimization
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.036 | TNS=-0.352 | WHS=0.000 | THS=0.000 |
+INFO: [Physopt 32-66] No high hold slack nets found for hold slack optimization.
+INFO: [Physopt 32-668] Current Timing Summary | WNS=-0.036 | TNS=-0.352 | WHS=0.000 | THS=0.000 |
+Phase 3 Hold Fix Optimization | Checksum: 1a3a26f9c
+
+Time (s): cpu = 00:01:29 ; elapsed = 00:01:09 . Memory (MB): peak = 1501.664 ; gain = 100.402
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1501.664 ; gain = 0.000
+INFO: [Physopt 32-669] Post Physical Optimization Timing Summary | WNS=-0.036 | TNS=-0.352 | WHS=0.000 | THS=0.000 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Critical Path  |          0.215  |         10.697  |            0  |              0  |                    14  |           0  |           1  |  00:01:07  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Summary of Hold Fix Optimizations
+=================================
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization               |  WHS Gain (ns)  |  THS Gain (ns)  |  Added LUTs  |  Added FFs  |  Optimized Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT1 and ZHOLD Insertion   |          0.000  |          0.000  |           0  |          0  |               0  |           0  |           0  |  00:00:00  |
+|  Total                      |          0.000  |          0.000  |           0  |          0  |               0  |           0  |           0  |  00:00:00  |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Physical Synthesis Task | Checksum: 1a3a26f9c
+
+Time (s): cpu = 00:01:29 ; elapsed = 00:01:09 . Memory (MB): peak = 1501.664 ; gain = 100.402
+INFO: [Common 17-83] Releasing license: Implementation
+550 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:01:29 ; elapsed = 00:01:09 . Memory (MB): peak = 1501.664 ; gain = 100.402
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.262 . Memory (MB): peak = 1501.664 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Projects/Code/ece540w20_proj3_r1_1/project_3/project_3.runs/impl_220_v1/nexys4fpga_v1_postroute_physopt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -warn_on_violation -file nexys4fpga_v1_timing_summary_postroute_physopted.rpt -pb nexys4fpga_v1_timing_summary_postroute_physopted.pb -rpx nexys4fpga_v1_timing_summary_postroute_physopted.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max, Timing Stage: Requireds.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file nexys4fpga_v1_bus_skew_postroute_physopted.rpt -pb nexys4fpga_v1_bus_skew_postroute_physopted.pb -rpx nexys4fpga_v1_bus_skew_postroute_physopted.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max, Timing Stage: Requireds.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Common 17-206] Exiting Vivado at Mon Mar  2 02:33:32 2020...

@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
--- Date        : Sat Feb 29 22:05:07 2020
+-- Date        : Sun Mar  1 20:09:44 2020
 -- Host        : Pine-Ripper running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               D:/Projects/Code/ECE540_Proj_03/project_3/project_3.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.vhdl
@@ -21,6 +21,7 @@ entity clk_wiz_0_clk_wiz_0_clk_wiz is
     clk_157 : out STD_LOGIC;
     clk_183 : out STD_LOGIC;
     clk_220 : out STD_LOGIC;
+    clk_275 : out STD_LOGIC;
     reset : in STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
@@ -34,6 +35,7 @@ architecture STRUCTURE of clk_wiz_0_clk_wiz_0_clk_wiz is
   signal clk_157_clk_wiz_0 : STD_LOGIC;
   signal clk_183_clk_wiz_0 : STD_LOGIC;
   signal clk_220_clk_wiz_0 : STD_LOGIC;
+  signal clk_275_clk_wiz_0 : STD_LOGIC;
   signal clk_in1_clk_wiz_0 : STD_LOGIC;
   signal clkfbout_buf_clk_wiz_0 : STD_LOGIC;
   signal clkfbout_clk_wiz_0 : STD_LOGIC;
@@ -44,7 +46,6 @@ architecture STRUCTURE of clk_wiz_0_clk_wiz_0_clk_wiz is
   signal NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED : STD_LOGIC;
-  signal NLW_mmcm_adv_inst_CLKOUT5_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKOUT6_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_DRDY_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_LOCKED_UNCONNECTED : STD_LOGIC;
@@ -64,6 +65,7 @@ architecture STRUCTURE of clk_wiz_0_clk_wiz_0_clk_wiz is
   attribute BOX_TYPE of clkout3_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of clkout4_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of clkout5_buf : label is "PRIMITIVE";
+  attribute BOX_TYPE of clkout6_buf : label is "PRIMITIVE";
   attribute BOX_TYPE of mmcm_adv_inst : label is "PRIMITIVE";
 begin
 clkf_buf: unisim.vcomponents.BUFG
@@ -104,6 +106,11 @@ clkout5_buf: unisim.vcomponents.BUFG
       I => clk_220_clk_wiz_0,
       O => clk_220
     );
+clkout6_buf: unisim.vcomponents.BUFG
+     port map (
+      I => clk_275_clk_wiz_0,
+      O => clk_275
+    );
 mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
     generic map(
       BANDWIDTH => "OPTIMIZED",
@@ -133,7 +140,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       CLKOUT4_DUTY_CYCLE => 0.500000,
       CLKOUT4_PHASE => 0.000000,
       CLKOUT4_USE_FINE_PS => false,
-      CLKOUT5_DIVIDE => 1,
+      CLKOUT5_DIVIDE => 4,
       CLKOUT5_DUTY_CYCLE => 0.500000,
       CLKOUT5_PHASE => 0.000000,
       CLKOUT5_USE_FINE_PS => false,
@@ -173,7 +180,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       CLKOUT3 => clk_183_clk_wiz_0,
       CLKOUT3B => NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED,
       CLKOUT4 => clk_220_clk_wiz_0,
-      CLKOUT5 => NLW_mmcm_adv_inst_CLKOUT5_UNCONNECTED,
+      CLKOUT5 => clk_275_clk_wiz_0,
       CLKOUT6 => NLW_mmcm_adv_inst_CLKOUT6_UNCONNECTED,
       DADDR(6 downto 0) => B"0000000",
       DCLK => '0',
@@ -202,6 +209,7 @@ entity clk_wiz_0 is
     clk_157 : out STD_LOGIC;
     clk_183 : out STD_LOGIC;
     clk_220 : out STD_LOGIC;
+    clk_275 : out STD_LOGIC;
     reset : in STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
@@ -218,6 +226,7 @@ inst: entity work.clk_wiz_0_clk_wiz_0_clk_wiz
       clk_157 => clk_157,
       clk_183 => clk_183,
       clk_220 => clk_220,
+      clk_275 => clk_275,
       clk_in1 => clk_in1,
       reset => reset
     );
