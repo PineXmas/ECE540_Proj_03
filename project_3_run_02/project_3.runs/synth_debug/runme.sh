@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log nexys4fpga_v2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source nexys4fpga_v2.tcl
+EAStep vivado -log nexys4fpga_max_inputs.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source nexys4fpga_max_inputs.tcl

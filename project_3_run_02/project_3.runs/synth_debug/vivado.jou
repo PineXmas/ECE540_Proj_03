@@ -2,11 +2,11 @@
 # Vivado v2018.2.1 (64-bit)
 # SW Build 2288692 on Thu Jul 26 18:24:02 MDT 2018
 # IP Build 2289599 on Thu Jul 26 21:09:20 MDT 2018
-# Start of session at: Tue Mar  3 01:34:32 2020
-# Process ID: 5428
+# Start of session at: Tue Mar  3 02:55:15 2020
+# Process ID: 1800
 # Current directory: N:/Projects/ECE540_Proj_03/project_3_run_02/project_3.runs/synth_debug
-# Command line: vivado.exe -log nexys4fpga_v2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source nexys4fpga_v2.tcl
-# Log file: N:/Projects/ECE540_Proj_03/project_3_run_02/project_3.runs/synth_debug/nexys4fpga_v2.vds
+# Command line: vivado.exe -log nexys4fpga_max_inputs.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source nexys4fpga_max_inputs.tcl
+# Log file: N:/Projects/ECE540_Proj_03/project_3_run_02/project_3.runs/synth_debug/nexys4fpga_max_inputs.vds
 # Journal file: N:/Projects/ECE540_Proj_03/project_3_run_02/project_3.runs/synth_debug\vivado.jou
 #-----------------------------------------------------------
-source nexys4fpga_v2.tcl -notrace
+source nexys4fpga_max_inputs.tcl -notrace

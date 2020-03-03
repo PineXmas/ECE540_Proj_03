@@ -1,69 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_220_v1_run_2" LaunchPart="xc7a100tcsg324-1" LaunchTime="1583225062">
-  <File Type="BITSTR-BMM" Name="nexys4fpga_v1_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="nexys4fpga_v1_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="nexys4fpga_v1_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR" Name="nexys4fpga_v1_power_routed.rpt"/>
   <File Type="PA-TCL" Name="nexys4fpga_v1.tcl"/>
-  <File Type="OPT-TIMING" Name="nexys4fpga_v1_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="nexys4fpga_v1_opt.dcp"/>
-  <File Type="ROUTE-PWR-SUM" Name="nexys4fpga_v1_power_summary_routed.pb"/>
+  <File Type="BITSTR-BMM" Name="nexys4fpga_v1_bd.bmm"/>
   <File Type="REPORTS-TCL" Name="nexys4fpga_v1_reports.tcl"/>
-  <File Type="OPT-DRC" Name="nexys4fpga_v1_drc_opted.rpt"/>
+  <File Type="OPT-DCP" Name="nexys4fpga_v1_opt.dcp"/>
   <File Type="OPT-HWDEF" Name="nexys4fpga_v1.hwdef"/>
   <File Type="PWROPT-DCP" Name="nexys4fpga_v1_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="nexys4fpga_v1_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="nexys4fpga_v1_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="nexys4fpga_v1_placed.dcp"/>
-  <File Type="PLACE-IO" Name="nexys4fpga_v1_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="nexys4fpga_v1_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="nexys4fpga_v1_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="nexys4fpga_v1_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="nexys4fpga_v1_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="nexys4fpga_v1_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="nexys4fpga_v1_incremental_reuse_pre_placed.rpt"/>
   <File Type="BG-BGN" Name="nexys4fpga_v1.bgn"/>
-  <File Type="PLACE-TIMING" Name="nexys4fpga_v1_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="nexys4fpga_v1_postplace_pwropt.dcp"/>
   <File Type="BG-BIN" Name="nexys4fpga_v1.bin"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="nexys4fpga_v1_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="nexys4fpga_v1_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="nexys4fpga_v1_drc_physopted.rpt"/>
   <File Type="BITSTR-MSK" Name="nexys4fpga_v1.msk"/>
-  <File Type="PHYSOPT-TIMING" Name="nexys4fpga_v1_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="nexys4fpga_v1_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="nexys4fpga_v1_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="nexys4fpga_v1_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="nexys4fpga_v1_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="nexys4fpga_v1_drc_routed.pb"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="nexys4fpga_v1.ltx"/>
-  <File Type="ROUTE-DRC-RPX" Name="nexys4fpga_v1_drc_routed.rpx"/>
   <File Type="BITSTR-MMI" Name="nexys4fpga_v1.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="nexys4fpga_v1_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="nexys4fpga_v1_methodology_drc_routed.rpx"/>
   <File Type="BITSTR-SYSDEF" Name="nexys4fpga_v1.sysdef"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="nexys4fpga_v1_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="nexys4fpga_v1_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="nexys4fpga_v1_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="nexys4fpga_v1_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="nexys4fpga_v1_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="nexys4fpga_v1_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="nexys4fpga_v1_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="nexys4fpga_v1_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="nexys4fpga_v1_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="nexys4fpga_v1_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="nexys4fpga_v1_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="nexys4fpga_v1_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="nexys4fpga_v1_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="nexys4fpga_v1_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="nexys4fpga_v1_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="nexys4fpga_v1_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="nexys4fpga_v1_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="nexys4fpga_v1_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="nexys4fpga_v1_bus_skew_postroute_physopted.pb"/>
   <File Type="BG-BIT" Name="nexys4fpga_v1.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="nexys4fpga_v1_bus_skew_postroute_physopted.rpx"/>
   <File Type="BITSTR-RBT" Name="nexys4fpga_v1.rbt"/>
   <File Type="BITSTR-NKY" Name="nexys4fpga_v1.nky"/>
   <File Type="BG-DRC" Name="nexys4fpga_v1.drc"/>

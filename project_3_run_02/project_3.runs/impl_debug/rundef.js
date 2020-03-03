@@ -25,7 +25,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-         "-log nexys4fpga_v2.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source nexys4fpga_v2.tcl -notrace" );
+         "-log nexys4fpga_max_inputs.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source nexys4fpga_max_inputs.tcl -notrace" );
 
 
 

@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log nexys4fpga_v2.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source nexys4fpga_v2.tcl -notrace
+EAStep vivado -log nexys4fpga_max_inputs.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source nexys4fpga_max_inputs.tcl -notrace
 
 
