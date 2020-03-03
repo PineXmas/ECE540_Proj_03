@@ -187,7 +187,7 @@ module nexys4fpga_v2 (
         // Clock out ports
         .clk_275(clk_100),     // output clk_out1
         // Status and control signals
-        .reset(sysreset), // input reset
+//        .reset(sysreset), // input reset
        // Clock in ports
         .clk_in1(clk)
     );      // input clk_in1
@@ -226,15 +226,15 @@ module nexys4fpga_v2 (
     // method #2
     // ==================================================
  	
- 	// compute separate positions
- 	always @(posedge sysclk) begin
+    // compute separate positions
+    always @(posedge sysclk) begin
         for( i = 0; i < N_INPUTS; i++) begin
             position_tmp[i] <= sel[i+1] ? i : 0;
         end
     end
  	
- 	// transpose position_temp arrays
- 	always @(posedge sysclk) begin
+    // transpose position_temp arrays
+    always @(posedge sysclk) begin
         for( i = 0; i < 32; i++) begin
             for( j = 0; j < N_INPUTS; j++) begin
                 position_tmp_transpose[i][j] <= position_tmp[j][i];

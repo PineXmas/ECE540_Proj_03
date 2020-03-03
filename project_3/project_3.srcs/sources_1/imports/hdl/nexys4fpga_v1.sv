@@ -53,7 +53,7 @@ module nexys4fpga_v1 (
 
 	// parameters
 	parameter SIMULATE = 0;
-	localparam	N_INPUTS = 15;
+	localparam	N_INPUTS = 16;
 
 	// internal variables
 	wire 	[15:0]		db_sw;					// debounced switches
@@ -186,9 +186,9 @@ module nexys4fpga_v1 (
 
   	clk_wiz_0 generated_clock(
         // Clock out ports
-        .clk_220(clk_100),     // output clk_out1
+        .clk_110(clk_100),     // output clk_out1
         // Status and control signals
-        .reset(sysreset), // input reset
+//        .reset(sysreset), // input reset
        // Clock in ports
         .clk_in1(clk)
     );      // input clk_in1

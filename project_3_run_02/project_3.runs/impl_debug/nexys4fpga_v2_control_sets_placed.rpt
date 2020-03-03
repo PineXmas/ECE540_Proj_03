@@ -1,0 +1,94 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2.1 (win64) Build 2288692 Thu Jul 26 18:24:02 MDT 2018
+| Date         : Tue Mar  3 01:37:11 2020
+| Host         : caplab10 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file nexys4fpga_v2_control_sets_placed.rpt
+| Design       : nexys4fpga_v2
+| Device       : xc7a100t
+------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    29 |
+| Unused register locations in slices containing registers |    26 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|     10 |            2 |
+|    16+ |           27 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             900 |          137 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             796 |           82 |
+| Yes          | No                    | No                     |             208 |           27 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             750 |           90 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------+------------------------------------+-----------------------------------+------------------+----------------+
+|          Clock Signal         |            Enable Signal           |          Set/Reset Signal         | Slice Load Count | Bel Load Count |
++-------------------------------+------------------------------------+-----------------------------------+------------------+----------------+
+|  generated_clock/inst/clk_275 |                                    | CTL/SS[0]                         |                1 |             10 |
+|  generated_clock/inst/clk_275 | OUTMUX/BINBCD/bin_reg1             | OUTMUX/BINBCD/done_conversion     |                3 |             10 |
+|  generated_clock/inst/clk_275 | CTL/Q[0]                           | DB/JA_OBUF[1]                     |                3 |             32 |
+|  generated_clock/inst/clk_275 | inputs[9][15]_i_1_n_0              | DB/JA_OBUF[1]                     |                3 |             32 |
+|  generated_clock/inst/clk_275 | inputs[0][15]_i_1_n_0              | DB/JA_OBUF[1]                     |                2 |             32 |
+|  generated_clock/inst/clk_275 | inputs[3][15]_i_1_n_0              | DB/JA_OBUF[1]                     |                3 |             32 |
+|  generated_clock/inst/clk_275 | inputs[11][15]_i_1_n_0             | DB/JA_OBUF[1]                     |                5 |             32 |
+|  generated_clock/inst/clk_275 | inputs[4][15]_i_1_n_0              | DB/JA_OBUF[1]                     |                3 |             32 |
+|  generated_clock/inst/clk_275 | inputs[5][15]_i_1_n_0              | DB/JA_OBUF[1]                     |                4 |             32 |
+|  generated_clock/inst/clk_275 | inputs[13][15]_i_1_n_0             | DB/JA_OBUF[1]                     |                6 |             32 |
+|  generated_clock/inst/clk_275 | inputs[14][15]_i_1_n_0             | DB/JA_OBUF[1]                     |                6 |             32 |
+|  generated_clock/inst/clk_275 | inputs[7][15]_i_1_n_0              | DB/JA_OBUF[1]                     |                5 |             32 |
+|  generated_clock/inst/clk_275 | inputs[12][15]_i_1_n_0             | DB/JA_OBUF[1]                     |                2 |             32 |
+|  generated_clock/inst/clk_275 | inputs[2][15]_i_1_n_0              | DB/JA_OBUF[1]                     |                4 |             32 |
+|  generated_clock/inst/clk_275 | inputs[8][15]_i_1_n_0              | DB/JA_OBUF[1]                     |                3 |             32 |
+|  generated_clock/inst/clk_275 | inputs[6][15]_i_1_n_0              | DB/JA_OBUF[1]                     |                5 |             32 |
+|  generated_clock/inst/clk_275 | inputs[15][15]_i_1_n_0             | DB/JA_OBUF[1]                     |                5 |             32 |
+|  generated_clock/inst/clk_275 | inputs[10][15]_i_1_n_0             | DB/JA_OBUF[1]                     |                4 |             32 |
+|  generated_clock/inst/clk_275 | inputs[1][15]_i_1_n_0              | DB/JA_OBUF[1]                     |                5 |             32 |
+|  generated_clock/inst/clk_275 | OUTMUX/BINBCD/binary_to_bcd_net_34 |                                   |                4 |             32 |
+|  generated_clock/inst/clk_275 | OUTMUX/BINBCD/binary_to_bcd_net_34 | OUTMUX/BINBCD/binary_to_bcd_net_2 |                2 |             32 |
+|  generated_clock/inst/clk_275 | DB/E[0]                            | DB/JA_OBUF[1]                     |                6 |             36 |
+|  generated_clock/inst/clk_275 |                                    | DB/is_top_cnt_reached             |                8 |             64 |
+|  generated_clock/inst/clk_275 | OUTMUX/BINBCD/binary_to_bcd_net_1  | OUTMUX/BINBCD/binary_to_bcd_net_2 |                5 |             64 |
+|  generated_clock/inst/clk_275 | OUTMUX/BINBCD/binary_to_bcd_net_35 | DB/JA_OBUF[1]                     |                6 |             64 |
+|  generated_clock/inst/clk_275 |                                    | DB/JA_OBUF[0]                     |               23 |            110 |
+|  generated_clock/inst/clk_275 | DB/is_top_cnt_reached              |                                   |               23 |            176 |
+|  generated_clock/inst/clk_275 |                                    | DB/JA_OBUF[1]                     |               50 |            612 |
+|  generated_clock/inst/clk_275 |                                    |                                   |              137 |            900 |
++-------------------------------+------------------------------------+-----------------------------------+------------------+----------------+
+
+
